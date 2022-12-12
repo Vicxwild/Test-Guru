@@ -1,0 +1,3 @@
+<% @questions.each do |question| %>
+  <p><%= link_to question.body, test_question_path(@test, question) %></p>
+<%end%>
