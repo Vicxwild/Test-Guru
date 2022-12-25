@@ -27,7 +27,6 @@ class QuestionsController < ApplicationController
 
   def destroy
     @question.destroy
-    # render plain: 'The question #{@question.id} has deleted!'
     redirect_to test_questions_path(@test)
   end
 
@@ -42,7 +41,7 @@ class QuestionsController < ApplicationController
   end
 
   def question_params
-    params.require(:question).permit(:body).to_h
+    params.require(:question).permit(:body)
   end
 
   def rescue_with_question_not_foun
