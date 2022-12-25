@@ -1,0 +1,9 @@
+<h1>New question</h1>
+
+<%= form_with url: test_questions_path(@test), model: @question, method: :post do |form| %>
+
+    <%= form.label "Question:" %><br>
+    <%= form.text_area :body, required: true, placeholder: "Write a question" %><br>
+    <%= form.submit "Submit" %><br>
+
+<% end %>
