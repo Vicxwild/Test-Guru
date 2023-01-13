@@ -12,7 +12,7 @@ class QuestionsController < ApplicationController
   end
 
   def new
-    @question = Question.new # сначала грузится представление потом вызывается нью? КАК ПЕРЕДАЮТСЯ ДАННЫЕ
+    @question = current_test.questions.new
   end
 
   def create
