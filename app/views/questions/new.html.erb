@@ -1,9 +1,5 @@
-<h1>New question</h1>
+<h1>Create new question</h1>
 
-<%= form_with url: test_questions_path(@test), model: @question, method: :post do |form| %>
+<%= render 'form' %>
 
-    <%= form.label "Question:" %><br>
-    <%= form.text_area :body, required: true, placeholder: "Write a question" %><br>
-    <%= form.submit "Submit" %><br>
-
-<% end %>
+<br><%= link_to 'Back', test_questions_path(current_test) %>

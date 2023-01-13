@@ -1,0 +1,13 @@
+<p>Test title: <%= render plain: @test.title %></p>
+<p>Level: <%= render plain: @test.questions.count %></p>
+
+<table>
+  <tr>
+    <th>Question</th>
+    <th colspan='3'>Actions</th>
+  </tr>
+
+  <%= render @test.questions, current_test: @test %>
+</table>
+
+<%= link_to 'Back', tests_path %>

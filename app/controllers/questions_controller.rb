@@ -1,43 +1,52 @@
 class QuestionsController < ApplicationController
-  before_action :find_test, only: [:index, :show, :new, :create, :destroy]
-  before_action :find_question, only: [:show, :destroy]
+  helper_method :current_test
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_question_not_foun
 
   def index
-    @questions = @test.questions
+    @questions = current_test.questions
   end
 
   def show
-    render plain: @question.body
+    @question = current_test.questions.find(params[:id])
   end
 
   def new
-    @question = Question.new
+    @question = Question.new # сначала грузится представление потом вызывается нью? КАК ПЕРЕДАЮТСЯ ДАННЫЕ
   end
 
   def create
-    @question = @test.questions.build(question_params)
+    @question = current_test.questions.build(question_params)
     if @question.save
-      redirect_to test_questions_path(@test)
+      redirect_to test_questions_path(current_test)
     else
       render :new
     end
   end
 
+  def edit
+    @question = current_test.questions.find(params[:id])
+  end
+
+  def update
+    @question = current_test.questions.find(params[:id])
+    if @question.update(question_params)
+      redirect_to test_question_path(current_test, @question)
+    else
+      render :edit
+    end
+  end
+
   def destroy
+    @question = current_test.questions.find(params[:id])
     @question.destroy
-    redirect_to test_questions_path(@test)
+    redirect_to test_questions_path(@current_test)
   end
 
   private
 
-  def find_test
-    @test = Test.find(params[:test_id])
-  end
-
-  def find_question
-    @question = @test.questions.find(params[:id])
+  def current_test
+    @current_test ||= Test.find(params[:test_id])
   end
 
   def question_params
@@ -45,6 +54,6 @@ class QuestionsController < ApplicationController
   end
 
   def rescue_with_question_not_foun
-    render plain: "The question was not found"
+    render plain: "The questions was not found"
   end
 end
