@@ -1,7 +1,7 @@
-<h1><%= question_header(@question) %></h1>
+<h1><%= question_header(current_question) %></h1>
 
-<%= form_with model: [current_test, @question] do |form| %>
-  <%= render 'shared/errors', resourse: @question %>
+<%= form_with model: [current_test, current_question] do |form| %>
+  <%= render 'shared/errors', resourse: current_question %>
 
   <div>
     <%= form.label "Question:" %>

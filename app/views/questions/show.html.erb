@@ -1,8 +1,8 @@
-<p><%= render plain: @question.body %></p>
+<p><%= render plain: current_question.body %></p>
 
 <%= link_to 'Back', test_questions_path(current_test) %> |
-<%= link_to 'Edit', edit_test_question_path(current_test, @question) %> |
+<%= link_to 'Edit', edit_test_question_path(current_test, current_question) %> |
 <%= link_to 'Delete',
-            test_question_path(current_test, @question),
+            test_question_path(current_test, current_question),
             method: :delete,
             data: { confirm: 'Are you sure?' } %>
