@@ -51,7 +51,7 @@ class QuestionsController < ApplicationController
   private
 
   def find_question
-    @find_question = current_test.questions.find(params[:id])
+    current_test.questions.find(params[:id])
   end
 
   def question_params
