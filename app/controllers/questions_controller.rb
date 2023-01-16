@@ -1,5 +1,5 @@
 class QuestionsController < ApplicationController
-  helper_method :current_test, :current_question
+  helper_method :current_test
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_question_not_found
 
@@ -7,7 +7,9 @@ class QuestionsController < ApplicationController
     @questions = current_test.questions
   end
 
-  def show; end
+  def show
+    @question = find_question
+  end
 
   def new
     @question = current_test.questions.new
@@ -15,6 +17,7 @@ class QuestionsController < ApplicationController
 
   def create
     @question = current_test.questions.build(question_params)
+
     if @question.save
       redirect_to test_questions_path(current_test)
     else
@@ -22,18 +25,22 @@ class QuestionsController < ApplicationController
     end
   end
 
-  def edit; end
+  def edit
+    @question = find_question
+  end
 
   def update
-    if current_question.update(question_params)
-      redirect_to test_question_path(current_test, current_question)
+    @question = find_question
+
+    if @question.update(question_params)
+      redirect_to test_question_path(current_test, @question)
     else
       render :edit
     end
   end
 
   def destroy
-    current_question.destroy
+    find_question.destroy
     redirect_to test_questions_path(current_test)
   end
 
@@ -41,11 +48,11 @@ class QuestionsController < ApplicationController
     @current_test ||= Test.find(params[:test_id])
   end
 
-  def current_question
-    @current_question ||= current_test.questions.find(params[:id])
-  end
-
   private
+
+  def find_question
+    @find_question = current_test.questions.find(params[:id])
+  end
 
   def question_params
     params.require(:question).permit(:body)
