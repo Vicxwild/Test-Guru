@@ -1,0 +1,17 @@
+<h1><%= question_header(@question) %></h1>
+
+<%= form_with model: [current_test, @question] do |form| %>
+  <%= render 'shared/errors', resourse: @question %>
+
+  <div>
+    <%= form.label "Question:" %>
+    <br>
+    <%= form.text_area :body, required: true, placeholder: "Write a question" %>
+  </div>
+
+  <div>
+    <%= form.submit "Submit" %>
+  </div>
+<% end %>
+
+<br><%= link_to 'Back', test_questions_path(current_test) %>
