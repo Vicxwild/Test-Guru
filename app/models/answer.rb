@@ -8,7 +8,7 @@ class Answer < ApplicationRecord
 
   private
 
-  def self.validate_answer_limit
-    errors.add(:answer, "can't include more than 4 answers") if question.answers.count > 4
+  def validate_answer_limit
+    errors.add(:answer, "can't include more than 4 answers") if question.answers.count >= 4
   end
 end
