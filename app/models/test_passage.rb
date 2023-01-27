@@ -30,4 +30,12 @@ class TestPassage < ApplicationRecord
     (correct_answers_count == correct_answers.where(id: answer_ids).count) &&
     correct_answers_count == answer_ids.count
   end
+
+  def correct_answers
+    current_question.answers.correct
+  end
+
+  def next_question
+    test.questions.order(:id).where('id > ?', current_question.id).first
+  end
 end
