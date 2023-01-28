@@ -5,6 +5,8 @@ class TestPassage < ApplicationRecord
 
   before_save :before_save_set_next_question
 
+  SUCCESS_RATE = 85.freeze
+
   def completed?
     current_question.nil?
   end
@@ -15,6 +17,14 @@ class TestPassage < ApplicationRecord
     end
 
     save!
+  end
+
+  def percentage_success
+    ((correct_questions.to_f / test.questions.count) * 100).to_i
+  end
+
+  def success?
+    percentage_success >= SUCCESS_RATE
   end
 
   private
