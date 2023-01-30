@@ -1,0 +1,9 @@
+<h1>New Answer</h1>
+
+<p>
+  <%= current_question.body %>
+</p>
+
+<%= render 'form'%>
+
+<%= link_to 'Back', test_question_path(current_test, current_question) %>
