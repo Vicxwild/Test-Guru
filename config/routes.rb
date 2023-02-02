@@ -2,6 +2,10 @@ Rails.application.routes.draw do
 
   root to: 'tests#index'
 
+  get :signup, to: 'users#new'
+
+  resources :users, only: :create
+
   resources :tests, only: %i[index show] do
     resources :questions do
       resources :answers, except: :index
