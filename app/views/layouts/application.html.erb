@@ -14,7 +14,10 @@
 
   <body>
     <% if logged_in? %>
-      <p class="nav user">Welcome, <b><%= current_user.name %> </b> Guru</p>
+      <p class="nav user">
+        Welcome, <b><%= current_user.name %> </b> Guru<br>
+        <%= link_to 'Logout', logout_path %>
+      </p>
     <% end %>
 
     <%= yield %>
