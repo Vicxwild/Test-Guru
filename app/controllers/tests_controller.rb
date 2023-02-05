@@ -19,8 +19,4 @@ class TestsController < ApplicationController
   def find_test
     Test.find(params[:id])
   end
-
-  # def test_params
-  #  params.require(:test).permit(:title, :level, :category_id, :creator_id)
-  # end
 end
