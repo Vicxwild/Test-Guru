@@ -2,7 +2,7 @@
   <td><%= test.title %></td>
   <td><%= test_level(test) %></td>
   <td><%= test.category.title %></td>
-  <td><%= test.creator.name %></td>
+  <td><%= test.creator.first_name %></td>
   <td><%= test.questions.size %></td>
   <td><%= link_to 'Show', test_path(test) %></td>
   <td><%= button_to 'Start', start_test_path(test) %></td>
