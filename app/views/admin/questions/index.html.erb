@@ -1,0 +1,17 @@
+<h1>Test title: <%= current_test.title %>, level: <%= current_test.level %></h1>
+
+<p>
+  <%= link_to 'Create a new question', new_test_question_path(current_test) %>
+</p>
+
+<table>
+  <tr>
+    <th>Question</th>
+    <th colspan='3'>Actions</th>
+  </tr>
+
+  <%= render @questions %>
+</table>
+
+<br><%= link_to 'Back', tests_path(current_test) %>
+

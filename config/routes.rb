@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   devise_for :users, path_names: { sign_in: :login, sign_out: :logout }
 
-  resources :tests, only: %i[index show] do
+  resources :tests, only: :index do
     resources :questions do
       resources :answers, except: :index
     end
@@ -17,6 +17,12 @@ Rails.application.routes.draw do
   resources :test_passages, only: %i[show update] do
     member do
       get :result
+    end
+  end
+
+  namespace :admin do
+    resources :tests do
+      resources :questions
     end
   end
 end

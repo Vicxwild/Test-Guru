@@ -4,10 +4,6 @@ class TestsController < ApplicationController
     @tests = Test.all.includes(:category, :creator, :questions)
   end
 
-  def show
-    @test = find_test
-  end
-
   def start
     @test = find_test
     current_user.tests.push(@test)
