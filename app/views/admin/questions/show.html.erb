@@ -4,15 +4,15 @@
 
 <h2>Answers</h2>
 
-<%= link_to 'New answer', new_test_question_answer_path(current_test, @question) %>
+<%= link_to 'New answer', new_admin_test_question_answer_path(current_test, @question) %>
 
 <ol>
   <%= render @question.answers %>
 </ol><br>
 
-<%= link_to 'Back', test_questions_path(current_test) %> |
-<%= link_to 'Edit', edit_test_question_path(current_test, @question) %> |
+<%= link_to 'Back', admin_test_path(current_test) %> |
+<%= link_to 'Edit', edit_admin_test_question_path(current_test, @question) %> |
 <%= link_to 'Delete',
-            test_question_path(current_test, @question),
+            admin_test_question_path(current_test, @question),
             method: :delete,
             data: { confirm: 'Are you sure?' } %>

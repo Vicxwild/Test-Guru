@@ -1,6 +1,6 @@
 <h1><%= question_header(@question) %></h1>
 
-<%= form_with model: [current_test, @question] do |form| %>
+<%= form_with model: [:admin, current_test, @question] do |form| %>
   <%= render 'shared/errors', resourse: @question %>
 
   <div>
@@ -14,4 +14,4 @@
   </div>
 <% end %>
 
-<br><%= link_to 'Back', test_questions_path(current_test) %>
+<br><%= link_to 'Back', admin_test_path(current_test) %>

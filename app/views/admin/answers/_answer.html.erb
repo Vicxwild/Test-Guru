@@ -1,9 +1,9 @@
 <li>
   <%= answer.body %><br>
-  <%= link_to 'Show', test_question_answer_path(current_test, @question, answer) %> |
-  <%= link_to 'Edit', edit_test_question_answer_path(current_test, @question, answer) %> |
+  <%= link_to 'Show', admin_test_question_answer_path(current_test, @question, answer) %> |
+  <%= link_to 'Edit', edit_admin_test_question_answer_path(current_test, @question, answer) %> |
   <%= link_to 'Delete',
-              test_question_answer_path(current_test, @question, answer),
+              admin_test_question_answer_path(current_test, @question, answer),
               method: :delete,
               data: { confirm: 'Are you sure?' } %>
 </li>

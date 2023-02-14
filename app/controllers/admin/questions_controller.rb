@@ -1,10 +1,8 @@
 class Admin::QuestionsController < Admin::BaseController
   helper_method :current_test
 
-  rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_question_not_found
-
-  def index
-    @questions = current_test.questions
+  def show
+    @question = find_question
   end
 
   def new
@@ -15,7 +13,7 @@ class Admin::QuestionsController < Admin::BaseController
     @question = current_test.questions.build(question_params)
 
     if @question.save
-      redirect_to test_questions_path(current_test)
+      redirect_to admin_test_path(current_test)
     else
       render :new
     end
@@ -29,7 +27,7 @@ class Admin::QuestionsController < Admin::BaseController
     @question = find_question
 
     if @question.update(question_params)
-      redirect_to test_question_path(current_test, @question)
+      redirect_to admin_test_path(current_test)
     else
       render :edit
     end
@@ -37,14 +35,14 @@ class Admin::QuestionsController < Admin::BaseController
 
   def destroy
     find_question.destroy
-    redirect_to test_questions_path(current_test)
+    redirect_to admin_test_path(current_test)
   end
+
+  private
 
   def current_test
     @current_test ||= Test.find(params[:test_id])
   end
-
-  private
 
   def find_question
     current_test.questions.find(params[:id])

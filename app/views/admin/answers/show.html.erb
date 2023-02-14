@@ -1,8 +1,4 @@
-<h1>Question</h1>
-
-<p>
-  <%= @answer.question.body %>
-</p>
+<h1>Viewing answer to a question: "<%= @answer.question.body %>"</h1>
 
 <p>
   <b>Answer</b>
@@ -14,5 +10,5 @@
   <%= @answer.correct %>
 </p>
 
-<%= link_to 'Back', test_question_path(current_test, current_question) %> |
-<%= link_to 'Edit', edit_test_question_answer_path(current_test, current_question, @answer) %>
+<%= link_to 'Back', admin_test_question_path(current_test, current_question) %> |
+<%= link_to 'Edit', edit_admin_test_question_answer_path(current_test, current_question, @answer) %>

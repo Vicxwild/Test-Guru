@@ -4,6 +4,10 @@ class Admin::TestsController < Admin::BaseController
     @tests = Test.all.includes(:category, :creator, :questions)
   end
 
+  def show
+    @test = find_test
+  end
+
   def new
     @test = Test.new
   end

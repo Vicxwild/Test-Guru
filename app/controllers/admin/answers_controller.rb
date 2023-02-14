@@ -1,6 +1,10 @@
 class Admin::AnswersController < Admin::BaseController
   helper_method :current_test, :current_question
 
+  def show
+    @answer = find_answer
+  end
+
   def new
     @answer = current_question.answers.new
   end
@@ -13,7 +17,7 @@ class Admin::AnswersController < Admin::BaseController
     @answer = current_question.answers.build(answer_params)
 
     if @answer.save
-      redirect_to test_question_path(current_test, current_question)
+      redirect_to admin_test_question_path(current_test, current_question)
     else
       render :new
     end
@@ -23,7 +27,7 @@ class Admin::AnswersController < Admin::BaseController
     @answer = find_answer
 
     if @answer.update(answer_params)
-      redirect_to test_question_path(current_test, current_question)
+      redirect_to admin_test_question_path(current_test, current_question)
     else
       :edit
     end
@@ -31,7 +35,7 @@ class Admin::AnswersController < Admin::BaseController
 
   def destroy
     find_answer.destroy
-    redirect_to test_question_path(current_test, current_question)
+    redirect_to admin_test_question_path(current_test, current_question)
   end
 
   private

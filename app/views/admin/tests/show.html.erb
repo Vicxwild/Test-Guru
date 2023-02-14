@@ -1,5 +1,7 @@
-<p>Test title: <%= render plain: @test.title %></p>
-<p>Level: <%= render plain: @test.questions.count %></p>
+<p>Test title: <b><%= render plain: @test.title %></b></p>
+<p>Level: <b><%= render plain: @test.questions.count %></b></p>
+
+<p><%= link_to 'Create new question', new_admin_test_question_path(@test) %></p>
 
 <table>
   <tr>
@@ -10,4 +12,4 @@
   <%= render @test.questions, current_test: @test %>
 </table>
 
-<%= link_to 'Back', tests_path %>
+<%= link_to 'Back', admin_tests_path %>
