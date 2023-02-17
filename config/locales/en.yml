@@ -12,3 +12,15 @@ en:
       action: "Action"
     test:
       start: "Start"
+
+  shared:
+    header:
+      welcome: "Welcome"
+      guru: "Guru"
+      logout: "Logout"
+      login: "Login"
+      signup: "Signup"
+    footer:
+      author: "Author: Klementyev Victor"
+      application_description: "The application for passing tests using the question - answer method"
+      course: "Educational project at the Thinknetica online school"

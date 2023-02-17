@@ -2,10 +2,10 @@
   <div>
     <p>
       <%= current_year %> |
-      Victor Klementyev |
+      <%= t('.author') %> |
       <%= github_url('Vicxwild', 'test-guru') %> |
-      The application for passing tests using the question - answer method |
-      <%= link_to 'Учебный проект в онлайн-школе Thinknetica', 'https://thinknetica.com/', target: '_blank' %>
+      <%= t('.application_description') %> |
+      <%= link_to t('.course'), 'https://thinknetica.com/', target: '_blank' %>
     </p>
   </div>
 </footer>

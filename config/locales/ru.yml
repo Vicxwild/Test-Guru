@@ -12,3 +12,15 @@ ru:
       action: "Действие"
     test:
       start: "Старт"
+
+  shared:
+    header:
+      welcome: "Добро пожаловать"
+      guru: "Гуру"
+      logout: "Выйти"
+      login: "Войти"
+      signup: "Зарегистрироваться"
+    footer:
+      author: "Автор: Клементьев Виктор"
+      application_description: "Приложение для прохождения тестов методом вопрос - ответ"
+      course: "Учебный проект в онлайн-школе Thinknetica"
