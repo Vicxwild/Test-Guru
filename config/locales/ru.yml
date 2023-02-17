@@ -1,0 +1,14 @@
+ru:
+  hello: "Привет мир!"
+
+  tests:
+    index:
+      header: "Список доступных тестов"
+      title: "Название"
+      level: "Сложность"
+      category: "Категория"
+      creator: "Создатель"
+      questions_count: "Кол-во вопросов"
+      action: "Действие"
+    test:
+      start: "Старт"
