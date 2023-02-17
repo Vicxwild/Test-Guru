@@ -4,9 +4,9 @@
   <td><%= test.category.title %></td>
   <td><%= test.creator.first_name %></td>
   <td><%= test.questions.size %></td>
-  <td><%= link_to 'Show', admin_test_path(test) %></td>
-  <td><%= link_to 'Edit', edit_admin_test_path(test) %></td>
-  <td><%= link_to 'Delete',
+  <td><%= link_to t('common.show'), admin_test_path(test) %></td>
+  <td><%= link_to t('common.edit'), edit_admin_test_path(test) %></td>
+  <td><%= link_to t('common.delete'),
                    admin_test_path(test),
                    method: :delete %></td>
   </td>

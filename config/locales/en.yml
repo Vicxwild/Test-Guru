@@ -1,11 +1,37 @@
 en:
   hello: "Hello world!"
 
+  common:
+    show: 'Show'
+    edit: 'Edit'
+    delete: 'Delete'
+    back: 'Back'
+    level: "Level"
+    actions: "Actions"
+
+  admin:
+    tests:
+      index:
+        header: "List of available tests"
+        create_new_test: "Create new test"
+        title: "Title"
+        category: "Category"
+        creator: "Creator"
+        questions_count: "Questions"
+        actions: "Actions"
+      show:
+        test_title: "Test title"
+        add_question: "Create new question"
+        questions: "Questions"
+      new:
+        header: "New test"
+      edit:
+        header: "Edit test"
+
   tests:
     index:
       header: "List of available tests"
       title: "Title"
-      level: "Level"
       category: "Category"
       creator: "Creator"
       questions_count: "Questions"

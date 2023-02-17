@@ -1,11 +1,39 @@
 ru:
   hello: "Привет мир!"
 
+  common:
+    show: "Показать"
+    edit: "Редактировать"
+    delete: "Удалить"
+    back: "Назад"
+    level: "Сложность"
+    actions: "Действия"
+
+  admin:
+    tests:
+      index:
+        header: "Список доступных тестов"
+        create_new_test: "Создать новый тест"
+        title: "Название"
+        category: "Категория"
+        creator: "Создатель"
+        questions_count: "Кол-во вопросов"
+        actions: "Действия"
+      show:
+        test_title: "Название теста"
+        add_question: "Добавить вопрос"
+        questions: "Вопросы"
+      new:
+        header: "Новый тест"
+      edit:
+        header: "Редактирование теста"
+
+
+
   tests:
     index:
       header: "Список доступных тестов"
       title: "Название"
-      level: "Сложность"
       category: "Категория"
       creator: "Создатель"
       questions_count: "Кол-во вопросов"
