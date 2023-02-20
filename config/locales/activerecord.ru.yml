@@ -2,9 +2,12 @@ ru:
   activerecord:
     models:
       test: 'Тест'
+      question: 'Вопрос'
 
     attributes:
       test:
         title: 'Название'
         level: 'Сложность'
         category: 'Категория'
+      question:
+        body: 'Вопрос'

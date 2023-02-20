@@ -9,6 +9,12 @@ en:
     level: "Level"
     actions: "Actions"
 
+  helpers:
+    submit:
+      question:
+        create: 'Create question'
+        update: 'Update question'
+
   admin:
     tests:
       index:
@@ -27,6 +33,33 @@ en:
         header: "New test"
       edit:
         header: "Edit test"
+
+    questions:
+      show:
+        header: "Question"
+        answers: "Answers"
+        add_answers: "Add answer"
+      form:
+        edit_question: "Edit %{test_title} Question"
+        create_question: "Create New %{test_title} Question"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   tests:
     index:
@@ -50,3 +83,10 @@ en:
       author: "Author: Klementyev Victor"
       application_description: "The application for passing tests using the question - answer method"
       course: "Educational project at the Thinknetica online school"
+
+  helper_methods:
+    question:
+      new_record: "Create a new test question: %{record}"
+      not_new_record: "Edit a test question: %{record}"
+
+

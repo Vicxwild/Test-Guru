@@ -9,6 +9,12 @@ ru:
     level: "Сложность"
     actions: "Действия"
 
+  helpers:
+    submit:
+      question:
+        create: 'Создать вопрос'
+        update: 'Обновить вопрос'
+
   admin:
     tests:
       index:
@@ -27,6 +33,31 @@ ru:
         header: "Новый тест"
       edit:
         header: "Редактирование теста"
+
+    questions:
+      show:
+        header: "Вопрос"
+        answers: "Ответы"
+        add_answers: "Добавить ответ"
+      form:
+        edit_question: "Редактировать вопрос теста: %{test_title}"
+        create_question: "Создать вопрос теста: %{test_title}"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -52,3 +83,8 @@ ru:
       author: "Автор: Клементьев Виктор"
       application_description: "Приложение для прохождения тестов методом вопрос - ответ"
       course: "Учебный проект в онлайн-школе Thinknetica"
+
+  helper_methods:
+    question:
+      new_record: "Создать новый ответ к вопросу: %{record}"
+      not_new_record: "Отредактировать вопрос теста: %{record}"
