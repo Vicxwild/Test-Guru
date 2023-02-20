@@ -95,8 +95,9 @@ ru:
       passed: "Тест пройден успешно"
       failed: "Тест провален"
 
-
-
+  tests_mailer:
+    completed_test:
+      subject: "Вы завершили тест TestGuru"
 
 
 

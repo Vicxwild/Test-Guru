@@ -91,8 +91,13 @@ en:
       next: "Next question"
     result:
       header: "The %{title} Test was Completed!"
+      result: "Your result"
       passed: "The test was passed successfully"
       failed: "The test failed"
+
+  tests_mailer:
+    completed_test:
+      subject: "You just completed the TestGuru test"
 
 
 
