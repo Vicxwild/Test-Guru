@@ -11,12 +11,23 @@ ru:
 
   helpers:
     submit:
+      user:
+        create: "Войти"
       question:
         create: 'Создать вопрос'
         update: 'Обновить вопрос'
       answer:
         create: 'Создать Ответ'
         update: 'Обновить ответ'
+
+    label:
+      user:
+        first_name: "Имя"
+        last_name: "Фамилия"
+        email: "Email"
+        password: "Пароль"
+        password_confirmation: "Подтвердите пароль"
+        remember_me: "Запомнить меня"
 
   shared:
     header:
