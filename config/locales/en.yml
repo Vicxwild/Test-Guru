@@ -14,7 +14,9 @@ en:
       question:
         create: 'Create question'
         update: 'Update question'
-
+      answer:
+        create: 'Create Answer'
+        update: 'Update Answer'
   admin:
     tests:
       index:
@@ -42,6 +44,17 @@ en:
       form:
         edit_question: "Edit %{test_title} Question"
         create_question: "Create New %{test_title} Question"
+
+    answers:
+      show:
+        header: "Viewing answer to a question"
+        answer: "Answer"
+        correct: "Correct"
+      new:
+        header: "New answer to a question"
+      edit:
+        header: "Editing answer to a question"
+
 
 
 

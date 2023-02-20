@@ -3,6 +3,7 @@ ru:
     models:
       test: 'Тест'
       question: 'Вопрос'
+      answer: 'Ответ'
 
     attributes:
       test:
@@ -11,3 +12,6 @@ ru:
         category: 'Категория'
       question:
         body: 'Вопрос'
+      answer:
+        body: 'Ответ'
+        correct: 'Верный'

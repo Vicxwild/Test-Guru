@@ -14,6 +14,9 @@ ru:
       question:
         create: 'Создать вопрос'
         update: 'Обновить вопрос'
+      answer:
+        create: 'Создать Ответ'
+        update: 'Обновить ответ'
 
   admin:
     tests:
@@ -43,9 +46,15 @@ ru:
         edit_question: "Редактировать вопрос теста: %{test_title}"
         create_question: "Создать вопрос теста: %{test_title}"
 
-
-
-
+    answers:
+      show:
+        header: "Просмотр ответа к вопросу"
+        answer: "Ответ"
+        correct: "Верный ответ"
+      new:
+        header: "Новый ответ к вопросу"
+      edit:
+        header: "Редактировать ответ к вопросу"
 
 
 

@@ -3,6 +3,7 @@ en:
     models:
       test: 'Test'
       question: 'Question'
+      answer: 'Answer'
 
     attributes:
       test:
@@ -11,3 +12,10 @@ en:
         category: 'Category'
       question:
         body: 'Question'
+      answer:
+        body: 'Answer'
+        correct: 'Correct'
+
+    errors:
+      messages:
+        blank: "сan't be blank"
