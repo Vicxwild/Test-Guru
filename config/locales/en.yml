@@ -17,6 +17,24 @@ en:
       answer:
         create: 'Create Answer'
         update: 'Update Answer'
+
+  shared:
+    header:
+      welcome: "Welcome"
+      guru: "Guru"
+      logout: "Logout"
+      login: "Login"
+      signup: "Signup"
+    footer:
+      author: "Author: Klementyev Victor"
+      application_description: "The application for passing tests using the question - answer method"
+      course: "Educational project at the Thinknetica online school"
+
+  helper_methods:
+    question:
+      new_record: "Create a new test question: %{record}"
+      not_new_record: "Edit a test question: %{record}"
+
   admin:
     tests:
       index:
@@ -55,25 +73,6 @@ en:
       edit:
         header: "Editing answer to a question"
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   tests:
     index:
       header: "List of available tests"
@@ -85,21 +84,26 @@ en:
     test:
       start: "Start"
 
-  shared:
-    header:
-      welcome: "Welcome"
-      guru: "Guru"
-      logout: "Logout"
-      login: "Login"
-      signup: "Signup"
-    footer:
-      author: "Author: Klementyev Victor"
-      application_description: "The application for passing tests using the question - answer method"
-      course: "Educational project at the Thinknetica online school"
+  test_passages:
+    show:
+      header: "Pass the %{title} Test"
+      question: "Question"
+      next: "Next question"
+    result:
+      header: "The %{title} Test was Completed!"
+      passed: "The test was passed successfully"
+      failed: "The test failed"
 
-  helper_methods:
-    question:
-      new_record: "Create a new test question: %{record}"
-      not_new_record: "Edit a test question: %{record}"
+
+
+
+
+
+
+
+
+
+
+
 
 
