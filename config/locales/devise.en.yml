@@ -39,6 +39,7 @@ en:
     registrations:
       new:
         header: "Sign up"
+        characters_minimum: "characters minimum"
         button: "Sign up"
       destroyed: "Bye! Your account has been successfully cancelled. We hope to see you again soon."
       signed_up: "Welcome! You have signed up successfully."
