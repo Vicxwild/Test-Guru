@@ -111,3 +111,12 @@ ru:
   tests_mailer:
     completed_test:
       subject: "Вы завершили тест TestGuru"
+
+  controllers:
+    admin:
+      base:
+        unathorized: "Вы не авторизованы для просмотра этой странцы."
+
+  users:
+    sessions:
+      notice: "Привет, %{user}!"
