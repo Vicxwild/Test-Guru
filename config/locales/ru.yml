@@ -19,6 +19,8 @@ ru:
       answer:
         create: 'Создать Ответ'
         update: 'Обновить ответ'
+    select:
+      prompt: "Выберете категорию"
 
     label:
       user:
@@ -109,16 +111,3 @@ ru:
   tests_mailer:
     completed_test:
       subject: "Вы завершили тест TestGuru"
-
-
-
-
-
-
-
-
-
-
-
-
-

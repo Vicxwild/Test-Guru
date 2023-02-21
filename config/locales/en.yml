@@ -19,6 +19,8 @@ en:
       answer:
         create: 'Create Answer'
         update: 'Update Answer'
+    select:
+      prompt: "Select category"
 
     label:
       user:
@@ -109,17 +111,3 @@ en:
   tests_mailer:
     completed_test:
       subject: "You just completed the TestGuru test"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
