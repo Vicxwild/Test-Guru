@@ -15,3 +15,7 @@ ru:
       answer:
         body: 'Ответ'
         correct: 'Верный'
+
+    errors:
+      messages:
+        blank: "не может быть пустым"
