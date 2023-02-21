@@ -4,14 +4,13 @@
   <%= render 'shared/errors', resourse: @question %>
 
   <div>
-    <%= form.label "Question:" %>
-    <br>
+    <%= form.label :body %>
     <%= form.text_area :body, required: true, placeholder: "Write a question" %>
   </div>
 
   <div>
-    <%= form.submit "Submit" %>
+    <%= form.submit %>
   </div>
 <% end %>
 
-<br><%= link_to 'Back', admin_test_path(current_test) %>
+<br><%= link_to t('common.back'), admin_test_path(current_test) %>

@@ -2,10 +2,10 @@
   <%= link_to 'TestGuru', root_path %> |
 
   <% if user_signed_in? %>
-    Welcome, <b><%= current_user.first_name %> </b> Guru |
-    <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
+    <%= t('.welcome') %>, <b><%= current_user.first_name %> </b>  <%= t('.guru') %> |
+    <%= link_to t('.logout'), destroy_user_session_path, method: :delete %>
   <% else %>
-    <%= link_to 'Login', new_user_session_path %> |
-    <%= link_to 'Signup', new_user_registration_path %>
+    <%= link_to t('.login'), new_user_session_path %> |
+    <%= link_to t('.signup'), new_user_registration_path %>
   <% end %>
 </div>

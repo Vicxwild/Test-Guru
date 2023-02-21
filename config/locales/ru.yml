@@ -1,0 +1,122 @@
+ru:
+  hello: "Привет мир!"
+
+  common:
+    show: "Показать"
+    edit: "Редактировать"
+    delete: "Удалить"
+    back: "Назад"
+    level: "Сложность"
+    actions: "Действия"
+
+  helpers:
+    submit:
+      user:
+        create: "Войти"
+      question:
+        create: 'Создать вопрос'
+        update: 'Обновить вопрос'
+      answer:
+        create: 'Создать Ответ'
+        update: 'Обновить ответ'
+    select:
+      prompt: "Выберете категорию"
+
+    label:
+      user:
+        first_name: "Имя"
+        last_name: "Фамилия"
+        email: "Email"
+        password: "Пароль"
+        password_confirmation: "Подтвердите пароль"
+        remember_me: "Запомнить меня"
+
+  shared:
+    header:
+      welcome: "Добро пожаловать"
+      guru: "Гуру"
+      logout: "Выйти"
+      login: "Войти"
+      signup: "Зарегистрироваться"
+    footer:
+      author: "Автор: Клементьев Виктор"
+      application_description: "Приложение для прохождения тестов методом вопрос - ответ"
+      course: "Учебный проект в онлайн-школе Thinknetica"
+
+  helper_methods:
+    question:
+      new_record: "Создать новый ответ к вопросу: %{record}"
+      not_new_record: "Отредактировать вопрос теста: %{record}"
+
+  admin:
+    tests:
+      index:
+        header: "Список доступных тестов"
+        create_new_test: "Создать новый тест"
+        title: "Название"
+        category: "Категория"
+        creator: "Создатель"
+        questions_count: "Кол-во вопросов"
+        actions: "Действия"
+      show:
+        test_title: "Название теста"
+        add_question: "Добавить вопрос"
+        questions: "Вопросы"
+      new:
+        header: "Новый тест"
+      edit:
+        header: "Редактирование теста"
+
+    questions:
+      show:
+        header: "Вопрос"
+        answers: "Ответы"
+        add_answers: "Добавить ответ"
+      form:
+        edit_question: "Редактировать вопрос теста: %{test_title}"
+        create_question: "Создать вопрос теста: %{test_title}"
+
+    answers:
+      show:
+        header: "Просмотр ответа к вопросу"
+        answer: "Ответ"
+        correct: "Верный ответ"
+      new:
+        header: "Новый ответ к вопросу"
+      edit:
+        header: "Редактировать ответ к вопросу"
+
+  tests:
+    index:
+      header: "Список доступных тестов"
+      title: "Название"
+      category: "Категория"
+      creator: "Создатель"
+      questions_count: "Кол-во вопросов"
+      action: "Действие"
+    test:
+      start: "Старт"
+
+  test_passages:
+    show:
+      header: "Прохождение теста: %{title}"
+      question: "Вопрос"
+      next: "Следующий вопрос"
+    result:
+      header: "Тест %{title} выполнен!"
+      result: "Ваш результат"
+      passed: "Тест пройден успешно"
+      failed: "Тест провален"
+
+  tests_mailer:
+    completed_test:
+      subject: "Вы завершили тест TestGuru"
+
+  controllers:
+    admin:
+      base:
+        unathorized: "Вы не авторизованы для просмотра этой странцы."
+
+  users:
+    sessions:
+      notice: "Привет, %{user}!"

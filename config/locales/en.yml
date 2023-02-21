@@ -1,33 +1,122 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at https://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  hello: "Hello world!"
+
+  common:
+    show: 'Show'
+    edit: 'Edit'
+    delete: 'Delete'
+    back: 'Back'
+    level: "Level"
+    actions: "Actions"
+
+  helpers:
+    submit:
+      user:
+        create: "Sign in"
+      question:
+        create: 'Create question'
+        update: 'Update question'
+      answer:
+        create: 'Create Answer'
+        update: 'Update Answer'
+    select:
+      prompt: "Select category"
+
+    label:
+      user:
+        first_name: "First name"
+        last_name: "Last name"
+        email: "Email"
+        password: "Password"
+        password_confirmation: "Password confirmation"
+        remember_me: "Remember me"
+
+  shared:
+    header:
+      welcome: "Welcome"
+      guru: "Guru"
+      logout: "Logout"
+      login: "Login"
+      signup: "Signup"
+    footer:
+      author: "Author: Klementyev Victor"
+      application_description: "The application for passing tests using the question - answer method"
+      course: "Educational project at the Thinknetica online school"
+
+  helper_methods:
+    question:
+      new_record: "Create a new test question: %{record}"
+      not_new_record: "Edit a test question: %{record}"
+
+  admin:
+    tests:
+      index:
+        header: "List of available tests"
+        create_new_test: "Create new test"
+        title: "Title"
+        category: "Category"
+        creator: "Creator"
+        questions_count: "Questions"
+        actions: "Actions"
+      show:
+        test_title: "Test title"
+        add_question: "Create new question"
+        questions: "Questions"
+      new:
+        header: "New test"
+      edit:
+        header: "Edit test"
+
+    questions:
+      show:
+        header: "Question"
+        answers: "Answers"
+        add_answers: "Add answer"
+      form:
+        edit_question: "Edit %{test_title} Question"
+        create_question: "Create New %{test_title} Question"
+
+    answers:
+      show:
+        header: "Viewing answer to a question"
+        answer: "Answer"
+        correct: "Correct"
+      new:
+        header: "New answer to a question"
+      edit:
+        header: "Editing answer to a question"
+
+  tests:
+    index:
+      header: "List of available tests"
+      title: "Title"
+      category: "Category"
+      creator: "Creator"
+      questions_count: "Questions"
+      action: "Action"
+    test:
+      start: "Start"
+
+  test_passages:
+    show:
+      header: "Pass the %{title} Test"
+      question: "Question"
+      next: "Next question"
+    result:
+      header: "The %{title} Test was Completed!"
+      result: "Your result"
+      passed: "The test was passed successfully"
+      failed: "The test failed"
+
+  tests_mailer:
+    completed_test:
+      subject: "You just completed the TestGuru test"
+
+  controllers:
+    admin:
+      base:
+        unathorized: "You are not authorized to view this page."
+
+  users:
+    sessions:
+      notice: "Hello, %{user}!"
