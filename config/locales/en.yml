@@ -38,6 +38,7 @@ en:
       logout: "Logout"
       login: "Login"
       signup: "Signup"
+      admin: "Admin Panel"
     footer:
       author: "Author: Klementyev Victor"
       application_description: "The application for passing tests using the question - answer method"

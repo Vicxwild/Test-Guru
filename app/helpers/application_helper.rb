@@ -13,4 +13,8 @@ module ApplicationHelper
       content_tag :p, message, class: "flash #{key}"
     end.join.html_safe
   end
+
+  def icon(name, text)
+    content_tag :i, text, class: "bi bi-#{name}"
+  end
 end
