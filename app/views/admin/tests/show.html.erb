@@ -1,15 +1,23 @@
-<p><%= t('.test_title') %>: <b><%= render plain: @test.title %></b></p>
-<p><%= t('common.level') %>: <b><%= render plain: @test.questions.count %></b></p>
+<div>
+  <h3 class="mt-2 mb-2"><%= t('.test_title') %>: <b><%= render plain: @test.title %></b></h3>
+  <p><%= t('common.level') %>: <b><%= render plain: @test.questions.count %></b></p>
 
-<p><%= link_to t('.add_question'), new_admin_test_question_path(@test) %></p>
+  <p><%= link_to icon('plus-lg',t('.add_question')), new_admin_test_question_path(@test), class: "btn btn-outline-primary" %></p>
 
-<table>
-  <tr>
-    <th><%= t('.questions') %></th>
-    <th colspan='3'><%= t('common.actions') %></th>
-  </tr>
+  <div class="table-responsive">
+    <table class="table table-bordered table-striped border-info">
+      <thead class="table-info">
+        <tr>
+          <th><%= t('.questions') %></th>
+          <th colspan='3'><%= t('common.actions') %></th>
+        </tr>
+      </thead>
 
-  <%= render @test.questions, current_test: @test %>
-</table>
+      <tbody>
+        <%= render @test.questions, current_test: @test %>
+      </tbody>
+    </table>
+  </div>
 
-<%= link_to t('common.back'), admin_tests_path %>
+  <%= link_to t('common.back'), admin_tests_path, class: "btn btn-outline-primary mb-2" %>
+</div>
