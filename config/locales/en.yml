@@ -50,6 +50,10 @@ en:
       not_new_record: "Edit a test question: %{record}"
 
   admin:
+    nav:
+      panel: "TestGuru Admin Panel"
+      welcome: "Welcome"
+      logout: "Logout"
     tests:
       index:
         header: "List of available tests"
