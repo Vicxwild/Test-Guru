@@ -17,7 +17,7 @@
         <%= link_to icon('box-arrow-left',t('.logout')), destroy_user_session_path, method: :delete, class:"nav-link text-white" %>
       <% else %>
         <%= link_to icon('box-arrow-right',t('.login')), new_user_session_path, class:"nav-link text-white" %>
-        <%= link_to icon('people',t('.singup')), new_user_registration_path, class:"nav-link text-white" %>
+        <%= link_to icon('people',t('.signup')), new_user_registration_path, class:"nav-link text-white" %>
       <% end %>
     </div>
   </div>

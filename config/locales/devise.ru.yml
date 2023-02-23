@@ -50,6 +50,8 @@ ru:
     sessions:
       new:
         header: "Вход в систему"
+        remember_me: "Запонмить меня"
+        enter: "Вход"
       signed_in_with_hello: "Привет, %{username}! Вход в систему выполнен."
       signed_in: "Вход в систему выполнен."
       signed_out: "Выход из системы выполнен."
