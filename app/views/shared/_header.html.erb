@@ -1,19 +1,24 @@
-<nav class="navbar navbar-dark bg-info">
-  <%= link_to "TestGuru", root_path, class: 'navbar-brand' %>
+<nav class="navbar navbar-expand-lg bg-info navbar-dark">
+  <div class="container-fluid">
+    <%= link_to "TestGuru", root_path, class: 'navbar-brand' %>
 
-  <span class="navbar-text">
-    <% if user_signed_in?%>
-      <% if current_user.admin?%>
-        <button type="button" class="btn btn-link mr-19">
-          <%= link_to t('.admin'), admin_tests_path %>
-        </button>
+    <div class="nav navbar-nav">
+      <% if user_signed_in?%>
+        <span class="navbar-text text-white">
+          <%= t('.welcome')%> <b><%= current_user.first_name %></b>
+        </span>
+
+        <% if current_user.admin? %>
+          <%= link_to admin_tests_path, class: "nav-link text-white" do %>
+            <%= icon('person-gear', t('.admin')) %>
+          <% end %>
+        <% end %>
+
+        <%= link_to icon('box-arrow-left',t('.logout')), destroy_user_session_path, method: :delete, class:"nav-link text-white" %>
+      <% else %>
+        <%= link_to icon('box-arrow-right',t('.login')), new_user_session_path, class:"nav-link text-white" %>
+        <%= link_to icon('people',t('.singup')), new_user_registration_path, class:"nav-link text-white" %>
       <% end %>
-
-      <%= t('.welcome') %>, <b><%= current_user.first_name %> </b>  <%= t('.guru') %> |
-      <%= link_to t('.logout'), destroy_user_session_path, method: :delete %>
-    <% else %>
-      <%= link_to t('.login'), new_user_session_path %> |
-      <%= link_to t('.signup'), new_user_registration_path %>
-    <% end %>
-  </span>
+    </div>
+  </div>
 </nav>
