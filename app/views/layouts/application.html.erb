@@ -18,9 +18,11 @@
   <body>
     <%= render 'shared/header' %>
 
-    <%= flash_messages %>
+    <div class="container-fluid">
+      <%= flash_messages %>
 
-    <%= yield %>
+      <%= yield %>
+    </div>
 
     <%= render 'shared/footer' %>
   </body>
