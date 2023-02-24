@@ -1,18 +1,21 @@
-<h1><%= @question.test.title %> <%= t('.header') %></h1>
+<div>
+  <h3 class="mt-2 mb-2"><%= @question.test.title %> <%= t('.header') %></h3>
 
-<p><%= render plain: @question.body %></p>
+  <p><%= render plain: @question.body %></p>
 
-<h2><%= t('.answers') %></h2>
+  <h2><%= t('.answers') %></h2>
 
-<%= link_to t('.add_answers'), new_admin_test_question_answer_path(current_test, @question) %>
+  <%= link_to icon('plus-lg', t('.add_answers')), new_admin_test_question_answer_path(current_test, @question), class: "btn btn-outline-primary"  %>
 
-<ol>
-  <%= render @question.answers %>
-</ol><br>
+  <ol>
+    <%= render @question.answers %>
+  </ol><br>
 
-<%= link_to t('common.back'), admin_test_path(current_test) %> |
-<%= link_to t('common.edit'), edit_admin_test_question_path(current_test, @question) %> |
-<%= link_to t('common.delete'),
-            admin_test_question_path(current_test, @question),
-            method: :delete,
-            data: { confirm: 'Are you sure?' } %>
+  <%= link_to t('common.back'), admin_test_path(current_test), class: "btn btn-outline-primary mb-2" %>
+  <%= link_to t('common.edit'), edit_admin_test_question_path(current_test, @question), class: "btn btn-outline-primary mb-2" %>
+  <%= link_to t('common.delete'),
+              admin_test_question_path(current_test, @question),
+              method: :delete,
+              data: { confirm: 'Are you sure?' },
+              class: "btn btn-outline-primary mb-2" %>
+</div>

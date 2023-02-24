@@ -2,7 +2,7 @@
   <h3 class="mt-2 mb-2"><%= t('.test_title') %>: <b><%= render plain: @test.title %></b></h3>
   <p><%= t('common.level') %>: <b><%= render plain: @test.questions.count %></b></p>
 
-  <p><%= link_to icon('plus-lg',t('.add_question')), new_admin_test_question_path(@test), class: "btn btn-outline-primary" %></p>
+  <p><%= link_to icon('plus-lg', t('.add_question')), new_admin_test_question_path(@test), class: "btn btn-outline-primary" %></p>
 
   <div class="table-responsive">
     <table class="table table-bordered table-striped border-info">
