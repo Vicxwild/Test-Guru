@@ -38,6 +38,7 @@ en:
       logout: "Logout"
       login: "Login"
       signup: "Signup"
+      admin: "Admin Panel"
     footer:
       author: "Author: Klementyev Victor"
       application_description: "The application for passing tests using the question - answer method"
@@ -49,6 +50,10 @@ en:
       not_new_record: "Edit a test question: %{record}"
 
   admin:
+    nav:
+      panel: "TestGuru Admin Panel"
+      welcome: "Welcome"
+      logout: "Logout"
     tests:
       index:
         header: "List of available tests"

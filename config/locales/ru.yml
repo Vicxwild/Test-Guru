@@ -38,6 +38,7 @@ ru:
       logout: "Выйти"
       login: "Войти"
       signup: "Зарегистрироваться"
+      admin: "Панель Администратора"
     footer:
       author: "Автор: Клементьев Виктор"
       application_description: "Приложение для прохождения тестов методом вопрос - ответ"
@@ -49,6 +50,10 @@ ru:
       not_new_record: "Отредактировать вопрос теста: %{record}"
 
   admin:
+    nav:
+      panel: "Панель Администратора TestGuru"
+      welcome: "Добро пожаловать"
+      logout: "Выйти"
     tests:
       index:
         header: "Список доступных тестов"
