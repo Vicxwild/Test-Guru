@@ -107,11 +107,15 @@ ru:
       header: "Прохождение теста: %{title}"
       question: "Вопрос"
       next: "Следующий вопрос"
+      create_gist: ' Создать gist'
     result:
       header: "Тест %{title} выполнен!"
       result: "Ваш результат"
       passed: "Тест пройден успешно"
       failed: "Тест провален"
+    gist:
+      success: 'Gist успешно сохранен!'
+      failure: 'Во время сохранения gist произошла ошибка'
 
   tests_mailer:
     completed_test:

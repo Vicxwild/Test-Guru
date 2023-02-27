@@ -107,11 +107,15 @@ en:
       header: "Pass the %{title} Test"
       question: "Question"
       next: "Next question"
+      create_gist: ' Create gist'
     result:
       header: "The %{title} Test was Completed!"
       result: "Your result"
       passed: "The test was passed successfully"
       failed: "The test failed"
+    gist:
+      success: 'Gist was successfully created!'
+      failure: 'An error occurred while saving gist'
 
   tests_mailer:
     completed_test:
