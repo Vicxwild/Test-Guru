@@ -28,6 +28,9 @@ gem 'devise', '~> 4.0'
 # NETWORKING
 gem 'faraday'
 
+# GitHub API client
+gem "octokit", "~> 5.0"
+
 # LOCALIZATION
 gem 'rails-i18n', '~> 6.0.0'
 
