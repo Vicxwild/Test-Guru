@@ -114,7 +114,7 @@ ru:
       passed: "Тест пройден успешно"
       failed: "Тест провален"
     gist:
-      success: 'Gist успешно сохранен!'
+      success: 'Gist успешно сохранен! Ссылка: %{url}'
       failure: 'Во время сохранения gist произошла ошибка'
 
   tests_mailer:

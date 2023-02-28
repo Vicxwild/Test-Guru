@@ -114,7 +114,7 @@ en:
       passed: "The test was passed successfully"
       failed: "The test failed"
     gist:
-      success: 'Gist was successfully created!'
+      success: 'Gist was successfully created! Link: %{url}'
       failure: 'An error occurred while saving gist'
 
   tests_mailer:
