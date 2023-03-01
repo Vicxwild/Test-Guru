@@ -64,6 +64,7 @@ en:
         creator: "Creator"
         questions_count: "Questions"
         actions: "Actions"
+        show_gists: " Show gistis"
       show:
         test_title: "Test title"
         add_question: "Create new question"

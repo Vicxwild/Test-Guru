@@ -63,6 +63,7 @@ ru:
         creator: "Создатель"
         questions_count: "Кол-во вопросов"
         actions: "Действия"
+        show_gists: " Просмотр gist'ов"
       show:
         test_title: "Название теста"
         add_question: "Добавить вопрос"
