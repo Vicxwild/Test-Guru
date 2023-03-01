@@ -3,6 +3,8 @@
     <%= link_to "TestGuru", root_path, class: 'navbar-brand' %>
 
     <div class="nav navbar-nav">
+      <%= link_to icon('globe', ''), switch_language, class: 'navbar-brand' %>
+
       <% if user_signed_in?%>
         <span class="navbar-text text-white">
           <%= t('.welcome')%> <b><%= current_user.first_name %></b>
