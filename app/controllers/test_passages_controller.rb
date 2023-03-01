@@ -28,6 +28,8 @@ class TestPassagesController < ApplicationController
       { alert: t('.failure') }
     end
 
+    current_user.gists.create(question: @test_passage.current_question, url: result.html_url)
+
     redirect_to @test_passage, flash_options
   end
 

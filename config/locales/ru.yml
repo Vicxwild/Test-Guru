@@ -91,6 +91,13 @@ ru:
       edit:
         header: "Редактировать ответ к вопросу"
 
+    gists:
+      index:
+        header: "Список всех gist'ов"
+        question: "Вопрос"
+        url: "Ссылка"
+        email: "Email пользователя"
+
   tests:
     index:
       header: "Список доступных тестов"

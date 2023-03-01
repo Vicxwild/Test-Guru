@@ -54,6 +54,7 @@ en:
       panel: "TestGuru Admin Panel"
       welcome: "Welcome"
       logout: "Logout"
+
     tests:
       index:
         header: "List of available tests"
@@ -90,6 +91,13 @@ en:
         header: "New answer to a question"
       edit:
         header: "Editing answer to a question"
+
+    gists:
+      index:
+        header: "List of all gists"
+        question: "Question"
+        url: "URL"
+        email: "User email"
 
   tests:
     index:
