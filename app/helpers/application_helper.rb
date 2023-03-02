@@ -21,6 +21,6 @@ module ApplicationHelper
   end
 
   def switch_language
-    I18n.locale == :ru ? url_for(lang: nil) : url_for(lang: :ru)
+    I18n.locale == :ru ? url_for(lang: :en) : url_for(lang: :ru)
   end
 end
