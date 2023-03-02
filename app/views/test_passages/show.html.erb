@@ -13,7 +13,7 @@
       </div>
     <% end %>
 
-    <p><%= link_to icon('github', t('.create_gist')), gist_test_passage_path(@test_passage), class: "btn btn-outline-primary mt-2", method: :post %></p>
+    <p><%= link_to icon('github', t('.create_gist')), gist_path, class: "btn btn-outline-primary mt-2", method: :post %></p>
     <p><%= form.submit t('.next'), class: "btn btn-primary mt-2" %></p>
   <% end %>
 

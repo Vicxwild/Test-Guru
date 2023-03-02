@@ -13,7 +13,6 @@ Rails.application.routes.draw do
   resources :test_passages, only: %i[show update] do
     member do
       get :result
-      post :gist
     end
   end
 
@@ -25,4 +24,6 @@ Rails.application.routes.draw do
     end
     resources :gists, only: :index
   end
+
+  resource :gist, only: :create
 end

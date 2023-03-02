@@ -122,9 +122,6 @@ en:
       result: "Your result"
       passed: "The test was passed successfully"
       failed: "The test failed"
-    gist:
-      success: 'Gist was successfully created! Link: %{url}'
-      failure: 'An error occurred while saving gist'
 
   tests_mailer:
     completed_test:
@@ -142,3 +139,8 @@ en:
   services:
     gist_question_service:
       description: "A question about %{test_title} from TestGuru"
+
+  gists:
+    create:
+      success: 'Gist was successfully created! Link: %{url}'
+      failure: 'An error occurred while saving gist'
