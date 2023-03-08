@@ -22,10 +22,16 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
-# AUTH
+# Auth
 gem 'devise', '~> 4.0'
 
-# LOCALIZATION
+# GitHub API client
+gem "octokit", "~> 5.0"
+
+# Loading environment variables
+gem 'dotenv-rails', groups: [:development, :test]
+
+# Localization
 gem 'rails-i18n', '~> 6.0.0'
 
 # UI

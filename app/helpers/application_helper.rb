@@ -19,4 +19,8 @@ module ApplicationHelper
   def icon(name, text)
     content_tag :i, text, class: "bi bi-#{name}"
   end
+
+  def switch_language
+    I18n.locale == :ru ? url_for(lang: :en) : url_for(lang: :ru)
+  end
 end

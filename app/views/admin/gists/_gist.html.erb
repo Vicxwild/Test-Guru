@@ -1,0 +1,6 @@
+<tr>
+  <td><%= gist.id %></td>
+  <td><%= link_to truncate(gist.question.body, length: 25), admin_test_question_path(gist.question.test, gist.question), target: "_blank" %></td>
+  <td><%= link_to_gist(gist.url) %></td>
+  <td><%= gist.user.email %></td>
+</tr>

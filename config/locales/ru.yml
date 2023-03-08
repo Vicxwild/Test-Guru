@@ -63,6 +63,7 @@ ru:
         creator: "Создатель"
         questions_count: "Кол-во вопросов"
         actions: "Действия"
+        show_gists: " Просмотр gist'ов"
       show:
         test_title: "Название теста"
         add_question: "Добавить вопрос"
@@ -91,6 +92,13 @@ ru:
       edit:
         header: "Редактировать ответ к вопросу"
 
+    gists:
+      index:
+        header: "Список всех gist'ов"
+        question: "Вопрос"
+        url: "Ссылка"
+        email: "Email пользователя"
+
   tests:
     index:
       header: "Список доступных тестов"
@@ -107,6 +115,7 @@ ru:
       header: "Прохождение теста: %{title}"
       question: "Вопрос"
       next: "Следующий вопрос"
+      create_gist: ' Создать gist'
     result:
       header: "Тест %{title} выполнен!"
       result: "Ваш результат"
@@ -125,3 +134,12 @@ ru:
   users:
     sessions:
       notice: "Привет, %{user}!"
+
+  services:
+    gist_question_service:
+      description: "Вопрос теста %{test_title} - TestGuru"
+
+  gists:
+    create:
+      success: 'Gist успешно сохранен! Ссылка: %{url}'
+      failure: 'Во время сохранения gist произошла ошибка'

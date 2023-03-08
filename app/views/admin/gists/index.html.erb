@@ -1,0 +1,23 @@
+<div class="container">
+
+  <h1 class="mt-2 mb-2 text-center"><%= t('.header') %></h1>
+
+  <div class="table-responsive">
+    <table class="table table-bordered table-striped border-info">
+      <thead class="table-info">
+        <tr class="table-active">
+          <th>№</th>
+          <th><%= t('.question') %></th>
+          <th><%= t('.url') %></th>
+          <th><%= t('.email') %></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <%= render @gists %>
+      </tbody>
+    </table>
+  </div>
+
+  <%= link_to t('common.back'), admin_tests_path, class: "btn btn-outline-primary mb-2" %>
+</div>
