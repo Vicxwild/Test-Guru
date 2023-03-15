@@ -1,4 +1,4 @@
-<% if resourse.errors.present? %>
+<% if resourse.present? && resourse.errors.any? %>
   <div>
     <h2><%= pluralize(resourse.errors.count, 'error') %> detected:</h2>
 
