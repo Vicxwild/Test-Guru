@@ -72,6 +72,8 @@ ru:
         header: "Новый тест"
       edit:
         header: "Редактирование теста"
+      form_inline:
+        submit: "ОК"
 
     questions:
       show:

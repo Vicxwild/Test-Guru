@@ -1,7 +1,7 @@
 class Admin::TestsController < Admin::BaseController
 
   def index
-    @tests = Test.all.includes(:category, :creator, :questions)
+    @tests = set_tests
   end
 
   def show
@@ -36,12 +36,27 @@ class Admin::TestsController < Admin::BaseController
     end
   end
 
+  def update_inline
+    @tests = set_tests
+    @test = find_test
+
+    if @test.update(test_params)
+      redirect_to admin_tests_path
+    else
+      render :index
+    end
+  end
+
   def destroy
     find_test.destroy
     redirect_to admin_tests_path
   end
 
   private
+
+  def set_tests
+    Test.all.includes(:category, :creator, :questions)
+  end
 
   def find_test
     Test.find(params[:id])
