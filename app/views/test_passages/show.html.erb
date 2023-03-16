@@ -3,6 +3,15 @@
 
   <p><%= t('.question')%>: <%= @test_passage.current_question.sequence_number %>/<%= @test_passage.test.questions.count %></p>
 
+  <%= content_tag :div,
+    class: 'tg-progress-bar mb-5',
+    data: {
+      position: @test_passage.current_question.sequence_number,
+      count: @test_passage.test.questions.count
+    } do %>
+    <div class='tg-progress'></div>
+  <% end %>
+
   <b class="mb-3 d-block"><%= @test_passage.current_question.body %></b>
 
   <%= form_with url: test_passage_path(@test_passage), local: true, method: :put do |form| %>
