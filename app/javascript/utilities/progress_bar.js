@@ -5,11 +5,7 @@ document.addEventListener('turbolinks:load', function() {
   const position = progressBar.dataset.position
   const count = progressBar.dataset.count
 
-  let percent = 0
-
-  if (position && count) {
-    percent = position / count * 100
-  }
+  const percent = position && count ? (position - 0.5) / count * 100 : 100
 
   const progressEl = progressBar.querySelector('.tg-progress')
   progressEl.style.width = `${percent}%`
