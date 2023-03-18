@@ -73,6 +73,8 @@ en:
         header: "New test"
       edit:
         header: "Edit test"
+      form_inline:
+        submit: "OK"
 
     questions:
       show:

@@ -1,5 +1,10 @@
 <h1><%= t('.header', title: @test_passage.test.title) %></h1>
 
+<%= content_tag :div,
+  class: 'tg-progress-bar mb-5' do %>
+  <div class='tg-progress'></div>
+<% end %>
+
 <h2><%= test_result(@test_passage) %></h2>
 
 <%= link_to t('common.back'), tests_path %>
