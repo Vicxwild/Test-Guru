@@ -1,7 +1,7 @@
 new_users = [
-  User.create(name: 'Ivan', email: 'bla@foo.com', password: 'qwerty'),
-  User.create(name: 'Mira', email: 'mira@bla.com', password: 'qwerty'),
-  User.create(name: 'Marsi', email: 'marsi@bla.com', password: 'qwerty')
+  User.create(first_name: 'Ivan', email: 'bla@foo.com', password: 'qwerty'),
+  User.create(first_name: 'Mira', email: 'mira@bla.com', password: 'qwerty'),
+  User.create(first_name: 'Marsi', email: 'marsi@bla.com', password: 'qwerty')
 ]
 
 questions_and_answers = {
