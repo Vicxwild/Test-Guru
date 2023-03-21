@@ -128,6 +128,9 @@ ru:
     completed_test:
       subject: "Вы завершили тест TestGuru"
 
+  feedback_mailer:
+    subject: "Обратная связь от пользователя TestGuru"
+
   controllers:
     admin:
       base:
@@ -145,3 +148,11 @@ ru:
     create:
       success: 'Gist успешно сохранен! Ссылка: %{url}'
       failure: 'Во время сохранения gist произошла ошибка'
+
+  feedbacks:
+    new:
+      header: "Обратная связь"
+      send: "Отправить"
+    create:
+      notice: "Мы получили ваше сообщение и скоро свяжемся с вами!"
+      alert: "Произошла ошибка при отправке вашего сообщения. Пожалуйста, попробуйте еще раз"

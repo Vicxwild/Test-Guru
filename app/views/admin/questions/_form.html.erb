@@ -4,7 +4,7 @@
 
     <div class="col-md-6">
       <%= form_with model: [:admin, current_test, @question] do |form| %>
-        <%= render 'shared/errors', resourse: @question %>
+        <%= render 'shared/errors', resource: @question %>
 
         <div class="form-group">>
           <%= form.label :body, class: "control-label" %>

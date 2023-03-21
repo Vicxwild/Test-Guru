@@ -129,6 +129,9 @@ en:
     completed_test:
       subject: "You just completed the TestGuru test"
 
+  feedback_mailer:
+    subject: "Feedback from TestGuru user"
+
   controllers:
     admin:
       base:
@@ -146,3 +149,11 @@ en:
     create:
       success: 'Gist was successfully created! Link: %{url}'
       failure: 'An error occurred while saving gist'
+
+  feedbacks:
+    new:
+      header: "Feedback"
+      send: "Send"
+    create:
+      notice: "We have received your message and will be in touch soon!"
+      alert: "There was an error sending your message. Please try again."

@@ -4,6 +4,7 @@ ru:
       test: 'Тест'
       question: 'Вопрос'
       answer: 'Ответ'
+      feedback: 'Обратная связь'
 
     attributes:
       test:
@@ -19,3 +20,9 @@ ru:
     errors:
       messages:
         blank: "не может быть пустым"
+
+  activemodel:
+    attributes:
+      feedback:
+        subject: 'Предмет обращения'
+        body: 'Ваше сообщение'

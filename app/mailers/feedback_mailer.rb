@@ -1,4 +1,6 @@
-class FeedbacksMailer < ApplicationMailer
+class FeedbackMailer < ApplicationMailer
+  include FeedbacksHelper
+
   def contact(feedback, user)
     @feedback = feedback
     @user = user
