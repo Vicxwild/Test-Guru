@@ -43,6 +43,7 @@ en:
       author: "Author: Klementyev Victor"
       application_description: "The application for passing tests using the question - answer method"
       course: "Educational project at the Thinknetica online school"
+      feedback: "Feedback form"
 
   helper_methods:
     question:

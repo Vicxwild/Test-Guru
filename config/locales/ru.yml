@@ -43,6 +43,7 @@ ru:
       author: "Автор: Клементьев Виктор"
       application_description: "Приложение для прохождения тестов методом вопрос - ответ"
       course: "Учебный проект в онлайн-школе Thinknetica"
+      feedback: "Форма обратной связи"
 
   helper_methods:
     question:
