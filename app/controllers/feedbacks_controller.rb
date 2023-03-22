@@ -4,13 +4,12 @@ class FeedbacksController < ApplicationController
   end
 
   def create
-    @feedback = Feedback.new(feedback_params)
-    @user = current_user
+    feedback = Feedback.new(feedback_params)
 
-    if @feedback.valid?
-      FeedbackMailer.contact(@feedback, @user).deliver_now
-      redirect_to root_path
+    if feedback.valid?
+      FeedbackMailer.contact(feedback, current_user).deliver_now
       flash[:notice] = t(".notice")
+      redirect_to root_path
     else
       flash[:alert] = t(".alert")
       render :new

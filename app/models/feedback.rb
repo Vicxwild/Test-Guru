@@ -1,7 +1,5 @@
 class Feedback
-  include ActiveModel::Validations
-  include ActiveModel::Conversion
-  extend ActiveModel::Naming
+  include ActiveModel::Model
 
   attr_reader :subject, :body
 
