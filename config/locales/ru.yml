@@ -131,6 +131,8 @@ ru:
       result: "Ваш результат"
       passed: "Тест пройден успешно"
       failed: "Тест провален"
+    update:
+      no_answer: "Вам необходимо выбрать вариант ответа!"
 
   tests_mailer:
     completed_test:

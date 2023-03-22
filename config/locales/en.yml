@@ -131,6 +131,8 @@ en:
       result: "Your result"
       passed: "The test was passed successfully"
       failed: "The test failed"
+    update:
+      no_answer: "You need to select an answer!"
 
   tests_mailer:
     completed_test:
