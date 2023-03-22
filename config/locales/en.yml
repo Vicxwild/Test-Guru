@@ -76,6 +76,11 @@ en:
         header: "Edit test"
       form_inline:
         submit: "OK"
+      test:
+        publish: "Publish"
+        unpublish: "Unpublish"
+        confirm_publish: "Do you really want to make this test available to users?"
+        confirm_unpublish: "Do you really want to make this test unavailable to users?"
 
     questions:
       show:
@@ -105,6 +110,7 @@ en:
 
   tests:
     index:
+      no_available_tests: "There are no tests available to pass"
       header: "List of available tests"
       title: "Title"
       category: "Category"

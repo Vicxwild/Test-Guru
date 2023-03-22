@@ -10,6 +10,7 @@ class Test < ApplicationRecord
   scope :middle, -> { by_level(2..4) }
   scope :difficult, -> { by_level(5..Float::INFINITY) }
   scope :by_category, -> (name) { joins(:category).where("categories.title = ?", name) }
+  scope :available, -> { where("questions_count > ?", 0).where.not(published_at: nil) }
 
   validates :title, presence: true, uniqueness: { scope: :level }
   validates :level, numericality: { only_integer: true, greater_than_or_equal_to: 0 }

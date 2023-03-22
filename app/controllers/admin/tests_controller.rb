@@ -52,6 +52,20 @@ class Admin::TestsController < Admin::BaseController
     redirect_to admin_tests_path
   end
 
+  def publish
+    @test = find_test
+
+    @test.update(published_at: Time.now)
+    redirect_to admin_tests_path
+  end
+
+  def unpublish
+    @test = find_test
+
+    @test.update(published_at: nil)
+    redirect_to admin_tests_path
+  end
+
   private
 
   def set_tests

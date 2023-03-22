@@ -1,7 +1,7 @@
 class TestsController < ApplicationController
 
   def index
-    @tests = Test.all.includes(:category, :creator, :questions)
+    @tests = Test.available.includes(:category, :creator, :questions)
   end
 
   def start

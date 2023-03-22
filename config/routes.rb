@@ -20,6 +20,9 @@ Rails.application.routes.draw do
     resources :tests do
       patch :update_inline, on: :member
 
+      patch :publish, on: :member
+      patch :unpublish, on: :member
+
       resources :questions, except: :index do
         resources :answers, except: :index
       end
