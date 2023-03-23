@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_03_23_093158) do
+ActiveRecord::Schema.define(version: 2023_03_23_134312) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -108,6 +108,15 @@ ActiveRecord::Schema.define(version: 2023_03_23_093158) do
     t.index ["type"], name: "index_users_on_type"
   end
 
+  create_table "users_badges", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "badge_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["badge_id"], name: "index_users_badges_on_badge_id"
+    t.index ["user_id"], name: "index_users_badges_on_user_id"
+  end
+
   add_foreign_key "answers", "questions"
   add_foreign_key "gists", "questions"
   add_foreign_key "gists", "users"
@@ -117,4 +126,6 @@ ActiveRecord::Schema.define(version: 2023_03_23_093158) do
   add_foreign_key "test_passages", "users"
   add_foreign_key "tests", "categories"
   add_foreign_key "tests", "users", column: "creator_id"
+  add_foreign_key "users_badges", "badges"
+  add_foreign_key "users_badges", "users"
 end
