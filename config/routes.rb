@@ -20,6 +20,9 @@ Rails.application.routes.draw do
     resources :tests do
       patch :update_inline, on: :member
 
+      patch :publish, on: :member
+      patch :unpublish, on: :member
+
       resources :questions, except: :index do
         resources :answers, except: :index
       end
@@ -28,4 +31,6 @@ Rails.application.routes.draw do
   end
 
   resource :gist, only: :create
+
+  resource :feedback, only: %i[new create]
 end

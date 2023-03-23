@@ -43,6 +43,7 @@ en:
       author: "Author: Klementyev Victor"
       application_description: "The application for passing tests using the question - answer method"
       course: "Educational project at the Thinknetica online school"
+      feedback: "Feedback form"
 
   helper_methods:
     question:
@@ -75,6 +76,11 @@ en:
         header: "Edit test"
       form_inline:
         submit: "OK"
+      test:
+        publish: "Publish"
+        unpublish: "Unpublish"
+        confirm_publish: "Do you really want to make this test available to users?"
+        confirm_unpublish: "Do you really want to make this test unavailable to users?"
 
     questions:
       show:
@@ -104,6 +110,7 @@ en:
 
   tests:
     index:
+      no_available_tests: "There are no tests available to pass"
       header: "List of available tests"
       title: "Title"
       category: "Category"
@@ -124,10 +131,15 @@ en:
       result: "Your result"
       passed: "The test was passed successfully"
       failed: "The test failed"
+    update:
+      no_answer: "You need to select an answer!"
 
   tests_mailer:
     completed_test:
       subject: "You just completed the TestGuru test"
+
+  feedback_mailer:
+    subject: "Feedback from TestGuru user"
 
   controllers:
     admin:
@@ -146,3 +158,11 @@ en:
     create:
       success: 'Gist was successfully created! Link: %{url}'
       failure: 'An error occurred while saving gist'
+
+  feedbacks:
+    new:
+      header: "Feedback"
+      send: "Send"
+    create:
+      notice: "We have received your message and will be in touch soon!"
+      alert: "There was an error sending your message. Please try again."

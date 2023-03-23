@@ -1,0 +1,16 @@
+<h1><%= t(".header") %></h1>
+
+<%= form_with model: @feedback, url: feedback_path, class: "form-group" do |form| %>
+
+  <div class="mb-3">
+    <%= form.label :subject, class: "form-label" %>
+    <%= form.text_field :subject, id: :subject_id , class: "form-control" %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :body, class: "form-label" %>
+    <%= form.text_area :body, id: :body_id, rows: 15, class: "form-control" %>
+  </div>
+
+  <%= form.submit t(".send"), class: "btn btn-primary mb-2" %>
+<% end %>

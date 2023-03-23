@@ -4,6 +4,7 @@ en:
       test: 'Test'
       question: 'Question'
       answer: 'Answer'
+      feedback: 'Feedback'
 
     attributes:
       test:
@@ -19,3 +20,9 @@ en:
     errors:
       messages:
         blank: "сan't be blank"
+
+  activemodel:
+    attributes:
+      feedback:
+        subject: 'Subject'
+        body: 'Your message'

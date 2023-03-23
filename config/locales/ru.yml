@@ -43,6 +43,7 @@ ru:
       author: "Автор: Клементьев Виктор"
       application_description: "Приложение для прохождения тестов методом вопрос - ответ"
       course: "Учебный проект в онлайн-школе Thinknetica"
+      feedback: "Форма обратной связи"
 
   helper_methods:
     question:
@@ -74,6 +75,12 @@ ru:
         header: "Редактирование теста"
       form_inline:
         submit: "ОК"
+      test:
+        publish: "Опубликовать"
+        unpublish: "Снять с публикации"
+        confirm_publish: "Вы действительно хотите сделать этот тест доступным для прохождения пользователям?"
+        confirm_unpublish: "Вы действительно хотите сделать этот тест недоступным для прохождения пользователям?"
+
 
     questions:
       show:
@@ -103,6 +110,7 @@ ru:
 
   tests:
     index:
+      no_available_tests: "Нет тестов доступных для прохождения"
       header: "Список доступных тестов"
       title: "Название"
       category: "Категория"
@@ -123,10 +131,15 @@ ru:
       result: "Ваш результат"
       passed: "Тест пройден успешно"
       failed: "Тест провален"
+    update:
+      no_answer: "Вам необходимо выбрать вариант ответа!"
 
   tests_mailer:
     completed_test:
       subject: "Вы завершили тест TestGuru"
+
+  feedback_mailer:
+    subject: "Обратная связь от пользователя TestGuru"
 
   controllers:
     admin:
@@ -145,3 +158,11 @@ ru:
     create:
       success: 'Gist успешно сохранен! Ссылка: %{url}'
       failure: 'Во время сохранения gist произошла ошибка'
+
+  feedbacks:
+    new:
+      header: "Обратная связь"
+      send: "Отправить"
+    create:
+      notice: "Мы получили ваше сообщение и скоро свяжемся с вами!"
+      alert: "Произошла ошибка при отправке вашего сообщения. Пожалуйста, попробуйте еще раз"

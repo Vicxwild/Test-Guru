@@ -1,7 +1,7 @@
 new_users = [
-  User.create(name: 'Ivan', email: 'bla@foo.com', password: 'qwerty'),
-  User.create(name: 'Mira', email: 'mira@bla.com', password: 'qwerty'),
-  User.create(name: 'Marsi', email: 'marsi@bla.com', password: 'qwerty')
+  User.create(first_name: 'Ivan', email: 'bla@foo.com', password: 'qwerty'),
+  User.create(first_name: 'Mira', email: 'mira@bla.com', password: 'qwerty'),
+  User.create(first_name: 'Marsi', email: 'marsi@bla.com', password: 'qwerty')
 ]
 
 questions_and_answers = {
@@ -25,7 +25,7 @@ questions_and_answers = {
 
 questions_and_answers.keys.each_with_index do |name, index|
   category = Category.create(title: name)
-  test = new_users[index].tests.create(title: name, level: index, category_id: category.id, creator_id: new_users[index].id)
+  test = new_users[index].tests.create(title: name, level: index, category_id: category.id, creator_id: new_users[index].id, published_at: Time.now)
   questions_and_answers.fetch(name).each do |hash|
     question = Question.create(body: hash[:question], test_id: test.id)
     Answer.create(body: hash[:right_answer], correct: true, question_id: question.id)

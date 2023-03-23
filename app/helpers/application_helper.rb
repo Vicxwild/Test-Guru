@@ -17,7 +17,7 @@ module ApplicationHelper
   end
 
   def icon(name, text)
-    content_tag :i, text, class: "bi bi-#{name}"
+    content_tag :i, " #{text}", class: "bi bi-#{name}"
   end
 
   def switch_language

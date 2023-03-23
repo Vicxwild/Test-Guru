@@ -18,5 +18,19 @@
     <%= link_to t('common.delete'),
                 admin_test_path(test),
                 method: :delete %></td>
+  <td class="align-middle">
+    <% if test.published_at.blank? %>
+      <%= link_to t('.publish'),
+                  publish_admin_test_path(test),
+                  method: :patch,
+                  class: "link-danger",
+                  data: { confirm: t(".confirm_publish") } %>
+    <% else %>
+      <%= link_to t('.unpublish'),
+                  unpublish_admin_test_path(test),
+                  method: :patch,
+                  class: "link-danger",
+                  data: { confirm: t(".confirm_unpublish") } %>
+    <% end %>
   </td>
 </tr>
