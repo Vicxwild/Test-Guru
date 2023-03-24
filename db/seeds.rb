@@ -91,13 +91,20 @@ end
 badge = Badge.new(
   title: "Backend king",
   description: "For successfully passing all Backend category tests",
-  url: "/images/backend.png"
+  picture_link: "/images/backend.png"
   )
 badge.save
 
 badge = Badge.new(
   title: "Frontend king",
   description: "For successfully passing all Frontend category tests",
-  url: "/images/frontend.png"
+  picture_link: "/images/frontend.png"
+  )
+badge.save
+
+badge = Badge.new(
+  title: "First try",
+  description: "For passing the test without errors",
+  picture_link: "/images/first-try.png"
   )
 badge.save
