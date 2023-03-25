@@ -17,7 +17,6 @@ class TestPassagesController < ApplicationController
       TestsMailer.completed_test(@test_passage).deliver_now
 
       received_badge = BadgeAchievementService.new(@test_passage).check_new_badges
-      binding.irb
       flash[:notice] = "You get a new badge!" if received_badge.any?
 
       redirect_to result_test_passage_path(@test_passage)
