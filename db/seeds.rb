@@ -1,5 +1,4 @@
 new_users = [
-  User.create(first_name: 'Ivan', email: 'bla@foo.com', password: 'qwerty'),
   User.create(first_name: 'Mira', email: 'mira@bla.com', password: 'qwerty'),
   User.create(first_name: 'Marsi', email: 'marsi@bla.com', password: 'qwerty')
 ]
@@ -103,7 +102,7 @@ badge = Badge.new(
 badge.save!
 
 badge = Badge.new(
-  title: "First try",
+  title: "Flawless victory",
   description: "For passing the test without errors",
   picture_link: "/images/first-try.png"
   )
