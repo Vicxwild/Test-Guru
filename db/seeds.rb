@@ -104,6 +104,13 @@ badge.save!
 badge = Badge.new(
   title: "Flawless victory",
   description: "For passing the test without errors",
+  picture_link: "/images/flawless-victory.png"
+  )
+badge.save!
+
+badge = Badge.new(
+  title: "First try",
+  description: "For successfully passing the test on the first attempt",
   picture_link: "/images/first-try.png"
   )
 badge.save!
