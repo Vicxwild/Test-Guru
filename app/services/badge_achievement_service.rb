@@ -1,10 +1,10 @@
 class BadgeAchievementService
 
   RULES = [
-    ::Badges::FrontendKingRule,
-    ::Badges::BackendKingRule,
-    ::Badges::FlawlessVictoryRule
-  ]
+    { title: "#{category_title} king", rule: ::Badges::KingRule.new(category_title) },
+    { title: "Flawless victory", rule: ::Badges::FlawlessVictoryRule },
+    { title: "First try", rule: ::Badges::FirstTryRule }
+  ].freeze
 
   def initialize(test_passage)
     @test_passage = test_passage
@@ -29,5 +29,9 @@ class BadgeAchievementService
 
   def save_badges(new_achievements)
     @user.badges << Badge.where(title: new_achievements)
+  end
+
+  def category_title
+    test_passage.category.title
   end
 end
