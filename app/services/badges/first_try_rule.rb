@@ -1,7 +1,7 @@
 module Badges
   class FirstTryRule
     class << self
-      def sutable?(test_passage)
+      def sutable?(test_passage, badge)
         user = test_passage.user
         test_id = test_passage.test.id
 

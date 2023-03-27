@@ -1,10 +1,10 @@
 class BadgeAchievementService
 
-  RULES = [
-    { title: "#{category_title} king", rule: ::Badges::KingRule.new(category_title) },
-    { title: "Flawless victory", rule: ::Badges::FlawlessVictoryRule },
-    { title: "First try", rule: ::Badges::FirstTryRule }
-  ].freeze
+  RULES = {
+      category: ::Badges::KingRule,
+      flawless_victory: ::Badges::FlawlessVictoryRule,
+      first_try: ::Badges::FirstTryRule
+  }.freeze
 
   def initialize(test_passage)
     @test_passage = test_passage
@@ -22,16 +22,13 @@ class BadgeAchievementService
   attr_reader :test_passage, :user
 
   def find_new_achievements
-    RULES.map do |rule|
-      rule.title if rule.sutable?(test_passage)
+    Badge.all.map do |badge|
+      rule = RULES[badge.rule_type]
+      badge.title if rule.sutable?(test_passage, badge)
     end.compact
   end
 
   def save_badges(new_achievements)
     @user.badges << Badge.where(title: new_achievements)
-  end
-
-  def category_title
-    test_passage.category.title
   end
 end
