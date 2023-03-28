@@ -20,7 +20,7 @@ en:
         create: 'Create Answer'
         update: 'Update Answer'
     select:
-      prompt: "Select category"
+      prompt: "Select a value"
 
     label:
       user:
@@ -114,6 +114,12 @@ en:
         icon: "Icon"
         title: "Title"
         description: "Description"
+      new:
+        header: "New badge"
+        success: "The new badge is saved!"
+      edit:
+        header: "Editing badge"
+        success: "The badge has been edited!"
 
   tests:
     index:

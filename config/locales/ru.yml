@@ -20,7 +20,7 @@ ru:
         create: 'Создать Ответ'
         update: 'Обновить ответ'
     select:
-      prompt: "Выберете категорию"
+      prompt: "Выберете значение"
 
     label:
       user:
@@ -114,6 +114,12 @@ ru:
         icon: "Иконка"
         title: "Название"
         description: "Описание"
+      new:
+        header: "Новый бейдж"
+        success: "Новый бейдж сохранен!"
+      edit:
+        header: "Изменить бейдж"
+        success: "Бейдж отредактирован!"
 
   tests:
     index:
