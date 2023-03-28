@@ -6,6 +6,7 @@ class CreateBadges < ActiveRecord::Migration[6.1]
       t.string :description, null: false
       t.string :rule_type, null: false
       t.string :category
+      t.string :level
 
       t.timestamps
     end

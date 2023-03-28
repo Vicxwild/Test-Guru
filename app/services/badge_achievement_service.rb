@@ -2,6 +2,7 @@ class BadgeAchievementService
 
   RULES = {
       category: ::Badges::KingRule,
+      level: ::Badges::LevelRule,
       flawless_victory: ::Badges::FlawlessVictoryRule,
       first_try: ::Badges::FirstTryRule
   }.freeze

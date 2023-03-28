@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 2023_03_23_134312) do
     t.string "description", null: false
     t.string "rule_type", null: false
     t.string "category"
+    t.string "level"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
