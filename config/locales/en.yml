@@ -108,6 +108,13 @@ en:
         url: "URL"
         email: "User email"
 
+    badges:
+      index:
+        header: "List of all badges"
+        icon: "Icon"
+        title: "Title"
+        description: "Description"
+
   tests:
     index:
       no_available_tests: "There are no tests available to pass"

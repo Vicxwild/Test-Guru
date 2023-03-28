@@ -27,7 +27,10 @@ Rails.application.routes.draw do
         resources :answers, except: :index
       end
     end
+
     resources :gists, only: :index
+
+    resources :badges
   end
 
   resource :gist, only: :create
