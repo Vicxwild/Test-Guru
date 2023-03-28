@@ -23,8 +23,8 @@ class BadgeAchievementService
 
   def find_new_achievements
     Badge.all.map do |badge|
-      rule = RULES[badge.rule_type]
-      badge.title if rule.sutable?(test_passage, badge)
+      rule = RULES[badge.rule_type.to_sym]
+      badge.title if rule.suitable?(test_passage, badge)
     end.compact
   end
 

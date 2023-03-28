@@ -91,6 +91,7 @@ badge = Badge.new(
   title: "Backend king",
   description: "For successfully passing all Backend category tests",
   picture_link: "/images/backend.png",
+  rule_type: :category,
   category: "Backend"
   )
 badge.save!
@@ -99,6 +100,7 @@ badge = Badge.new(
   title: "Frontend king",
   description: "For successfully passing all Frontend category tests",
   picture_link: "/images/frontend.png",
+  rule_type: :category,
   category: "Frontend"
   )
 badge.save!
@@ -106,6 +108,7 @@ badge.save!
 badge = Badge.new(
   title: "Flawless victory",
   description: "For passing the test without errors",
+  rule_type: :flawless_victory,
   picture_link: "/images/flawless-victory.png"
   )
 badge.save!
@@ -113,6 +116,7 @@ badge.save!
 badge = Badge.new(
   title: "First try",
   description: "For successfully passing the test on the first attempt",
+  rule_type: :first_try,
   picture_link: "/images/first-try.png"
   )
 badge.save!

@@ -1,7 +1,7 @@
 module Badges
   class KingRule
     class << self
-      def sutable?(test_passage, badge)
+      def suitable?(test_passage, badge)
         current_user = test_passage.user
         current_test_category_title = test_passage.category.title
         badge_category_title = badge.category
