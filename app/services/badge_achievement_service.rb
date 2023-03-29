@@ -10,6 +10,7 @@ class BadgeAchievementService
   def initialize(test_passage)
     @test_passage = test_passage
     @user = test_passage.user
+    @badges = Badge.all
   end
 
   def call
@@ -20,16 +21,16 @@ class BadgeAchievementService
 
   private
 
-  attr_reader :test_passage, :user
+  attr_reader :test_passage, :user, :badges
 
   def find_new_achievements
-    Badge.all.map do |badge|
+    badges.map do |badge|
       rule = RULES[badge.rule_type.to_sym]
-      badge.title if rule.suitable?(test_passage, badge)
+      badge if rule.suitable?(test_passage, badge)
     end.compact
   end
 
   def save_badges(new_achievements)
-    @user.badges << Badge.where(title: new_achievements)
+    @user.badges << new_achievements
   end
 end
