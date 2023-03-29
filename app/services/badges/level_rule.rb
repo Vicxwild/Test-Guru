@@ -3,7 +3,7 @@ module Badges
     class << self
       def suitable?(test_passage, badge)
         user = test_passage.user
-        rule_level = badge.level.to_i
+        rule_level = badge.param.to_i
         test_level = test_passage.test.level
 
         return if rule_level != test_level

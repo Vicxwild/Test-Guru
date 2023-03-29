@@ -29,8 +29,7 @@ ActiveRecord::Schema.define(version: 2023_03_29_091647) do
     t.string "picture_link", null: false
     t.string "description", null: false
     t.string "rule_type", null: false
-    t.string "category"
-    t.string "level"
+    t.string "param"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

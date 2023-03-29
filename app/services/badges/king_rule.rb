@@ -4,7 +4,7 @@ module Badges
       def suitable?(test_passage, badge)
         user = test_passage.user
         current_test_category_title = test_passage.category.title
-        badge_category_title = badge.category
+        badge_category_title = badge.param
 
         return if badge_category_title != current_test_category_title
 

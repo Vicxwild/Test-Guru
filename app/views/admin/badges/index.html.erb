@@ -1,6 +1,8 @@
 <div>
   <h1 class="mt-2 mb-2 text-center"><%= t('.header') %></h1>
 
+  <p><%= link_to icon('plus-lg', t('.create_new_badge')), new_admin_badge_path, class: "btn btn-outline-primary" %></p>
+
   <div>
     <table class="table table-bordered border-info">
       <thead class="table-info">
@@ -17,4 +19,6 @@
       </tbody>
     </table>
   </div>
+
+  <%= link_to t('common.back'), admin_tests_path, class: "btn btn-outline-primary mb-2" %>
 </div>

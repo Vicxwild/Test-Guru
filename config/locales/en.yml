@@ -114,11 +114,14 @@ en:
         icon: "Icon"
         title: "Title"
         description: "Description"
+        create_new_badge: "Create new badge"
       new:
         header: "New badge"
+      create:
         success: "The new badge is saved!"
       edit:
         header: "Editing badge"
+      update:
         success: "The badge has been edited!"
 
   tests:

@@ -15,15 +15,13 @@
       <p><%= f.label :rule_type %></p>
       <p><%= f.select :rule_type, rule_types, prompt: true %></p>
 
-      <p><%= f.label :category %></p>
-      <p><%= f.collection_select :category, Category.all, :title, :title, prompt: true %></p>
-
-      <p><%= f.label :level %></p>
-      <p><%= f.collection_select :level, Test.all, :level, :level, prompt: true %></p>
+      <p><%= f.label :param %></p>
+      <p><%= f.text_field :param, class: 'form-control' %></p>
 
       <%= f.submit class: "btn btn-primary" %>
-      <%= link_to t('common.back'), admin_badges_path, class: "btn btn-primary" %>
     <% end %>
+
+  <%= link_to t('common.back'), admin_badges_path, class: "btn btn-outline-primary mt-2" %>
   </div>
 </div>
 

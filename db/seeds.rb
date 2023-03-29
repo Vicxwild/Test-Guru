@@ -92,7 +92,7 @@ badge = Badge.new(
   description: "For successfully passing all Backend category tests",
   picture_link: "backend.png",
   rule_type: :category,
-  category: "Backend"
+  param: "Backend"
   )
 badge.save!
 
@@ -101,7 +101,7 @@ badge = Badge.new(
   description: "For successfully passing all Frontend category tests",
   picture_link: "frontend.png",
   rule_type: :category,
-  category: "Frontend"
+  param: "Frontend"
   )
 badge.save!
 
@@ -126,6 +126,6 @@ badge = Badge.new(
   description: "For successfully passing the test on the level 1",
   rule_type: :level,
   picture_link: "first-test.png",
-  level: 1
+  param: 1
   )
 badge.save!

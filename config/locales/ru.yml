@@ -114,11 +114,14 @@ ru:
         icon: "Иконка"
         title: "Название"
         description: "Описание"
+        create_new_badge: "Создать новый бейдж"
       new:
         header: "Новый бейдж"
+      create:
         success: "Новый бейдж сохранен!"
       edit:
         header: "Изменить бейдж"
+      update:
         success: "Бейдж отредактирован!"
 
   tests:
