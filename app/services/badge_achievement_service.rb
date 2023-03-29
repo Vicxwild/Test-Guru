@@ -12,7 +12,7 @@ class BadgeAchievementService
     @user = test_passage.user
   end
 
-  def check_new_badges
+  def call
     new_achievements = find_new_achievements
 
     save_badges(new_achievements) if new_achievements.any?
