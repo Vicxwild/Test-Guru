@@ -28,6 +28,14 @@ class TestPassage < ApplicationRecord
     percentage_success >= SUCCESS_RATE
   end
 
+  def success!
+    if self.success?
+      self.success = true
+    end
+
+    save!
+  end
+
   private
 
   def before_save_set_next_question
