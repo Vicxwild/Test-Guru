@@ -4,6 +4,8 @@ class TestPassage < ApplicationRecord
   belongs_to :current_question, class_name: 'Question', optional: true
   has_one :category, through: :test
 
+  scope :successful, -> { where(success: true) }
+
   before_save :before_save_set_next_question
 
   SUCCESS_RATE = 85.freeze

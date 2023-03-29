@@ -120,3 +120,12 @@ badge = Badge.new(
   picture_link: "first-try.png"
   )
 badge.save!
+
+badge = Badge.new(
+  title: "1 level",
+  description: "For successfully passing the test on the level 1",
+  rule_type: :level,
+  picture_link: "first-test.png",
+  level: 1
+  )
+badge.save!

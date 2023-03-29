@@ -7,7 +7,7 @@ module Badges
         badge_category_title = badge.category
 
         if badge_category_title == current_test_category_title
-          user.tests.by_category(badge_category_title).uniq.count == Test.by_category(badge_category_title).available.count
+          user.tests.by_category(badge_category_title).by_success.count == Test.by_category(badge_category_title).available.count
         end
       end
     end
