@@ -6,9 +6,9 @@ module Badges
         rule_level = badge.level.to_i
         test_level = test_passage.test.level
 
-        if rule_level == test_level
-          user.tests.by_level(rule_level).by_success.count == Test.by_level(rule_level).available.count
-        end
+        return if rule_level != test_level
+
+        user.tests.by_level(rule_level).by_success.count == Test.by_level(rule_level).available.count
       end
     end
   end
