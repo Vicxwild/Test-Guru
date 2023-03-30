@@ -1,0 +1,21 @@
+<div>
+  <h1 class="mt-2 mb-2 text-center"><%= t('.header') %></h1>
+
+  <div>
+    <table class="table table-bordered border-info">
+      <thead class="table-info">
+        <tr>
+          <th><%= t('.icon') %></th>
+          <th><%= t('.title') %></th>
+          <th><%= t('.description') %></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <%= render @badges %>
+      </tbody>
+    </table>
+  </div>
+
+  <%= link_to t('common.back'), root_path, class: "btn btn-outline-primary mb-2" %>
+</div>

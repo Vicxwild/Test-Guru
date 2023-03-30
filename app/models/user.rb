@@ -13,6 +13,9 @@ class User < ApplicationRecord
   has_many :created_tests, class_name: "Test", foreign_key: "creator_id"
   has_many :gists
 
+  has_many :users_badges
+  has_many :badges, through: :users_badges
+
   validates :email, presence: true, format: { with: URI::MailTo::EMAIL_REGEXP },
                     uniqueness: true
   validates :first_name, presence: true

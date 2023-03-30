@@ -11,6 +11,7 @@ class Test < ApplicationRecord
   scope :difficult, -> { by_level(5..Float::INFINITY) }
   scope :by_category, -> (name) { joins(:category).where("categories.title = ?", name) }
   scope :available, -> { where("questions_count > ?", 0).where.not(published_at: nil) }
+  scope :by_success, -> { joins(:test_passages).where(test_passages: { success: true }).distinct }
 
   validates :title, presence: true, uniqueness: { scope: :level }
   validates :level, numericality: { only_integer: true, greater_than_or_equal_to: 0 }

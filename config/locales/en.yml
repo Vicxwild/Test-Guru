@@ -20,7 +20,7 @@ en:
         create: 'Create Answer'
         update: 'Update Answer'
     select:
-      prompt: "Select category"
+      prompt: "Select a value"
 
     label:
       user:
@@ -108,6 +108,22 @@ en:
         url: "URL"
         email: "User email"
 
+    badges:
+      index:
+        header: "List of all badges"
+        icon: "Icon"
+        title: "Title"
+        description: "Description"
+        create_new_badge: "Create new badge"
+      new:
+        header: "New badge"
+      create:
+        success: "The new badge is saved!"
+      edit:
+        header: "Editing badge"
+      update:
+        success: "The badge has been edited!"
+
   tests:
     index:
       no_available_tests: "There are no tests available to pass"
@@ -166,3 +182,10 @@ en:
     create:
       notice: "We have received your message and will be in touch soon!"
       alert: "There was an error sending your message. Please try again."
+
+  badges:
+    index:
+      header: "Your badges"
+      icon: "Icon"
+      title: "Title"
+      description: "Description"

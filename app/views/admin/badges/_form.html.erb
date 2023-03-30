@@ -1,0 +1,27 @@
+<div class="row justify-content-left mt-3">
+  <div class="col col-md-4">
+    <%= form_with model: [:admin, @badge] do |f| %>
+      <%= render 'shared/errors', resource: @badge %>
+
+      <p><%= f.label :title %></p>
+      <p><%= f.text_field :title, class: 'form-control' %></p>
+
+      <p><%= f.label :description %></p>
+      <p><%= f.text_field :description, class: 'form-control' %></p>
+
+      <p><%= f.label :picture_link %></p>
+      <p><%= f.select :picture_link, images, prompt: true %></p>
+
+      <p><%= f.label :rule_type %></p>
+      <p><%= f.select :rule_type, rule_types, prompt: true %></p>
+
+      <p><%= f.label :param %></p>
+      <p><%= f.text_field :param, class: 'form-control' %></p>
+
+      <%= f.submit class: "btn btn-primary" %>
+    <% end %>
+
+  <%= link_to t('common.back'), admin_badges_path, class: "btn btn-outline-primary mt-2" %>
+  </div>
+</div>
+

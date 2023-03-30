@@ -1,0 +1,10 @@
+<tr>
+  <td><%= image_tag "#{badge.picture_link}", height: '50' %></td>
+  <td><%= badge.title %></td>
+  <td><%= badge.description %></td>
+  <td><%= link_to t('common.edit'), edit_admin_badge_path(badge) %></td>
+  <td><%= link_to t('common.delete'),
+                  admin_badge_path(badge),
+                  method: :delete,
+                  data: { confirm: 'Are you sure?' } %></td>
+</tr>

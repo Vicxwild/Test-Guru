@@ -2,6 +2,9 @@ class TestPassage < ApplicationRecord
   belongs_to :user
   belongs_to :test
   belongs_to :current_question, class_name: 'Question', optional: true
+  has_one :category, through: :test
+
+  scope :successful, -> { where(success: true) }
 
   before_save :before_save_set_next_question
 
@@ -25,6 +28,18 @@ class TestPassage < ApplicationRecord
 
   def success?
     percentage_success >= SUCCESS_RATE
+  end
+
+  def success!
+    if self.success?
+      self.success = true
+    end
+
+    begin
+      save!
+    rescue ActiveRecord::RecordInvalid => e
+      Rails.logger.error "Failed to save TestPassage: #{e.message}"
+    end
   end
 
   private
