@@ -6,7 +6,7 @@ module Badges
         rule_level = param.to_i
         test_level = test_passage.test.level
 
-        return if rule_level != test_level
+        return if rule_level != test_level && test_passage.success != true
 
         user.tests.by_level(rule_level).by_success.count == Test.by_level(rule_level).available.count
       end
