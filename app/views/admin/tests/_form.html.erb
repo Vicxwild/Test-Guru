@@ -18,10 +18,16 @@
           <%= form.label :category_id %>
           <%= form.collection_select :category_id, Category.all, :id, :title, prompt: true %>
         </p>
+
+        <div class="ms-3">
+          <p class="fw-bolder"><%= t('.time_limit') %></p>
+
+          <%= form.number_field :time_limit, class: 'form-control' %>
+        </div>
       </div>
 
       <p>
-        <%= form.submit class: 'btn btn-primary' %>
+        <%= form.submit class: 'btn btn-primary mt-3' %>
       </p>
     <% end %>
   </div>

@@ -81,6 +81,8 @@ en:
         unpublish: "Unpublish"
         confirm_publish: "Do you really want to make this test available to users?"
         confirm_unpublish: "Do you really want to make this test unavailable to users?"
+      form:
+        time_limit: "Time to pass in seconds (optional parameter)"
 
     questions:
       show:
