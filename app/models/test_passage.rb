@@ -1,4 +1,7 @@
 class TestPassage < ApplicationRecord
+
+  attribute :time_left, :integer
+
   belongs_to :user
   belongs_to :test
   belongs_to :current_question, class_name: 'Question', optional: true
@@ -42,6 +45,10 @@ class TestPassage < ApplicationRecord
     end
   end
 
+  def time_is_over?
+    Time.now > self.time_left_at
+  end
+
   private
 
   def before_save_set_next_question
@@ -58,5 +65,9 @@ class TestPassage < ApplicationRecord
 
   def next_question
     test.questions.order(:id).where('id > ?', current_question.id).first
+  end
+
+  def time_left_at
+    created_at + test.time_limit.seconds
   end
 end
