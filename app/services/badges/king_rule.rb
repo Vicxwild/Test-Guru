@@ -1,10 +1,10 @@
 module Badges
   class KingRule
     class << self
-      def suitable?(test_passage, badge)
+      def suitable?(test_passage, param)
         user = test_passage.user
         current_test_category_title = test_passage.category.title
-        badge_category_title = badge.param
+        badge_category_title = param
 
         return if badge_category_title != current_test_category_title
 
