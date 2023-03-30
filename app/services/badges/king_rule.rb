@@ -6,9 +6,16 @@ module Badges
         current_test_category_title = test_passage.category.title
         badge_category_title = param
 
-        return if badge_category_title != current_test_category_title && test_passage.success != true
+        return false if badge_category_title != current_test_category_title
 
-        user.tests.by_category(badge_category_title).by_success.count == Test.by_category(badge_category_title).available.count
+        not_passed_tests = Test.by_category(badge_category_title)
+            .available
+            .where
+            .not(
+              id: user.tests.by_category(badge_category_title).by_success
+            )
+
+        !not_passed_tests.exists?
       end
     end
   end

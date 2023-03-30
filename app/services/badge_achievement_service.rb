@@ -14,6 +14,8 @@ class BadgeAchievementService
   end
 
   def call
+    return [] unless test_passage.success?
+
     badges.map do |badge|
       rule = RULES[badge.rule_type.to_sym]
       @user.badges << badge if rule.suitable?(test_passage, badge.param)
