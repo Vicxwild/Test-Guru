@@ -35,7 +35,11 @@ class TestPassage < ApplicationRecord
       self.success = true
     end
 
-    save!
+    begin
+      save!
+    rescue ActiveRecord::RecordInvalid => e
+      Rails.logger.error "Failed to save TestPassage: #{e.message}"
+    end
   end
 
   private
