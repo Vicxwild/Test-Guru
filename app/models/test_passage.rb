@@ -43,9 +43,13 @@ class TestPassage < ApplicationRecord
   end
 
   def time_is_over?
-    return if test.time_limit == 0
+    return false if test.time_limit == 0
 
     Time.now > self.time_left_at
+  end
+
+  def time_left
+    time_left_at - Time.now
   end
 
   private

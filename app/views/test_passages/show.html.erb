@@ -1,6 +1,8 @@
 <div class="container-fluid mt-3 mb-2">
-  <h1 class="text-center"><%= t('.header', title: @test_passage.test.title) %></h1>
-
+  <div class="title_container">
+    <h1 class="text-center"><%= t('.header', title: @test_passage.test.title) %></h1>
+    <div id="timer" data-time-left="<%= @test_passage.time_left %>"></div>
+  </div>
   <p><%= t('.question')%>: <%= @test_passage.current_question.sequence_number %>/<%= @test_passage.test.questions.count %></p>
 
   <%= content_tag :div,
