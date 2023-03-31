@@ -66,6 +66,7 @@ en:
         questions_count: "Questions"
         actions: "Actions"
         show_gists: " Show gistis"
+        timer: "Timer (min)"
       show:
         test_title: "Test title"
         add_question: "Create new question"
@@ -81,6 +82,7 @@ en:
         unpublish: "Unpublish"
         confirm_publish: "Do you really want to make this test available to users?"
         confirm_unpublish: "Do you really want to make this test unavailable to users?"
+        no_timer: "Absent"
       form:
         time_limit: "Time to pass in minutes (optional parameter)"
 
@@ -135,6 +137,7 @@ en:
       creator: "Creator"
       questions_count: "Questions"
       action: "Action"
+      timer: "Timer (min)"
     test:
       start: "Start"
 

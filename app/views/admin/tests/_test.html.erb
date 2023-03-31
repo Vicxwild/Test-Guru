@@ -7,6 +7,7 @@
   <td class="align-middle"><%= test.category.title %></td>
   <td class="align-middle"><%= test.creator.first_name %></td>
   <td class="align-middle"><%= test.questions.size %></td>
+  <td class="align-middle"><%= timer(test) %></td>
   <td class="align-middle"><%= link_to t('common.show'), admin_test_path(test) %></td>
   <td class="align-middle">
     <%= link_to t('common.edit'),
