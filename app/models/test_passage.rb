@@ -1,7 +1,4 @@
 class TestPassage < ApplicationRecord
-
-  attribute :time_left, :integer
-
   belongs_to :user
   belongs_to :test
   belongs_to :current_question, class_name: 'Question', optional: true
@@ -46,6 +43,8 @@ class TestPassage < ApplicationRecord
   end
 
   def time_is_over?
+    return if test.time_limit == 0
+
     Time.now > self.time_left_at
   end
 
@@ -68,6 +67,6 @@ class TestPassage < ApplicationRecord
   end
 
   def time_left_at
-    created_at + test.time_limit.seconds
+    created_at + test.time_limit.minutes
   end
 end
