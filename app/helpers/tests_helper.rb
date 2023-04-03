@@ -7,6 +7,6 @@ module TestsHelper
   end
 
   def timer(test)
-    test.time_limit == 0 ? t('admin.tests.test.no_timer') : test.time_limit
+    test.time_limit == 0 ? t('admin.tests.test.no_timer') : test.time_limit.to_s
   end
 end
