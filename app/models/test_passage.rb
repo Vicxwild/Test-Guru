@@ -42,6 +42,16 @@ class TestPassage < ApplicationRecord
     end
   end
 
+  def time_is_over?
+    return false if test.time_limit == 0
+
+    Time.now > self.time_left_at
+  end
+
+  def time_left
+    time_left_at - Time.now
+  end
+
   private
 
   def before_save_set_next_question
@@ -58,5 +68,9 @@ class TestPassage < ApplicationRecord
 
   def next_question
     test.questions.order(:id).where('id > ?', current_question.id).first
+  end
+
+  def time_left_at
+    created_at + test.time_limit.minutes
   end
 end

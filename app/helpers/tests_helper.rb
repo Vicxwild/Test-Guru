@@ -5,4 +5,8 @@ module TestsHelper
   def test_level(test)
     TEST_LEVELS[test.level] || :hero
   end
+
+  def timer(test)
+    test.time_limit == 0 ? t('admin.tests.test.no_timer') : test.time_limit.to_s
+  end
 end

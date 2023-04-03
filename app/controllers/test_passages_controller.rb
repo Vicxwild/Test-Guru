@@ -13,7 +13,7 @@ class TestPassagesController < ApplicationController
 
     @test_passage.accept!(params[:answer_ids])
 
-    if @test_passage.completed?
+    if @test_passage.completed? || @test_passage.time_is_over?
       @test_passage.success!
 
       TestsMailer.completed_test(@test_passage).deliver_now
